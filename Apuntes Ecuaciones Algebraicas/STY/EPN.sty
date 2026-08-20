@@ -1,0 +1,365 @@
+\ProvidesPackage{EPN}
+%%%%%%%%%%%%%%%%%%%%%%% Paquetes %%%%%%%%%%%%%%%%%%%%%%%
+\usepackage[utf8]{inputenc} 
+\usepackage{amsmath}
+\usepackage{amssymb}
+\usepackage{geometry}
+\usepackage[table]{xcolor}
+\usepackage{colortbl}
+\usepackage{graphicx}
+%\PassOptionsToPackage{table,svgnames,xcdraw}{xcolor}
+\usepackage{color}
+\usepackage{subfigure}
+\usepackage{sidecap}
+\usepackage{dirtytalk}
+\usepackage{graphicx}
+\usepackage{subcaption}
+\usepackage{float}
+\usepackage[dvipsnames]{xcolor}
+\usepackage{changepage}
+\sidecaptionvpos{figure}{c}
+\usepackage{caption}
+\usepackage{commath}
+\usepackage{cancel}
+\usepackage{setspace}
+\usepackage{anysize}
+\usepackage{csquotes}
+\usepackage{tcolorbox}
+\usepackage{lipsum}
+\usepackage{answers}
+\usepackage{nccmath}
+\usepackage[shortlabels]{enumitem}
+\usepackage[acronym,toc]{glossaries}
+\captionsetup[table]{position=top}
+%\usepackage{filecontents}
+\tcbuselibrary{skins,breakable}
+\usetikzlibrary{shadings,shadows,arrows.meta}
+\usepackage{mathtools, amsfonts, amssymb, amsthm}
+\newtheorem{cont}{\hspace{-1em}}[chapter]
+\theoremstyle{definition}
+\newtheorem{defi}[cont]{Definición}
+\newtheorem{defis}[cont]{Definiciones}
+\newtheorem{propi}[cont]{Propiedades}
+\newtheorem{obs}[cont]{Observaciones}
+\newtheorem*{ob}{Observación}
+\newtheorem*{notacion}{Notación}
+\newtheorem{obydefi}[cont]{Observaciones y definiciones}
+\newtheorem{ej}[cont]{Ejemplos}
+\newtheorem{ejem}[cont]{Ejemplo}
+\theoremstyle{theorem}
+\newtheorem{teo}[cont]{Teorema}
+\newtheorem{coro}[cont]{Corolario}
+\newtheorem{propo}[cont]{Proposición}
+\newtheorem{lem}[cont]{Lema}
+\newtheorem*{asert}{Aserto}
+\numberwithin{equation}{section}
+\usepackage{makeidx}
+\usepackage{float,graphicx}
+\usepackage{lmodern}
+\usepackage{textcomp,gensymb}
+\usepackage{nccmath}
+\usepackage{wrapfig}
+\usepackage{tikz}
+\usepackage[new]{old-arrows}
+\usepackage{newclude}
+\geometry{a4paper, total={6in, 9in}}
+
+
+
+
+\NewDocumentEnvironment{demo}{O{} O{} O{}}
+{
+\par\addvspace{0.8em}
+\noindent\normalfont{\textit{Demostración} (\cite{#1}, \textit{Capítulo #2}, \textit{#3})}
+}
+{\hfill$\square$\par}
+
+%-_-_-_-_-_-_-_-_-_-
+%=================== Márgenes ===================
+\marginsize{2cm}{2cm}{2cm}{2cm} % Izquierda, derecha, arriba, abajo
+%=================== Insertar PDFs ===================
+\usepackage{pdfpages} 
+%=================== Apéndices ===================
+\usepackage{appendix}
+\renewcommand{\appendixname}{Apéndices}
+\renewcommand{\appendixtocname}{Apéndices}
+\renewcommand{\appendixpagename}{Apéndices} 
+%=================== Hipervínculos ===================
+\usepackage[colorlinks=true,plainpages=false,citecolor=magenta,linkcolor=blue]{hyperref}
+\usepackage{labelschanged}
+%\usepackage{hyperref} 
+\usepackage{fancyhdr} 
+\renewcommand{\footrulewidth}{0.4pt}
+
+%=================== Comandos ===================
+\newcommand{\vsp}[1]{\vspace{#1mm}}
+\newcommand{\hsp}[1]{\hspace{#1mm}}
+\newcommand{\bs}[1]{\boldsymbol{#1}}
+\newcommand{\modu}[2]{\ensuremath{#1~\text{mod}~#2}}
+\newcommand{\ord}[1]{\ensuremath{>_{#1}}}
+\newcommand{\ori}[1]{\ensuremath{<_{#1}}}
+\newcommand{\hpm}[1][0.2]{\ensuremath{\hspace{#1mm}}}
+\newcommand{\dsp}{\ensuremath{\displaystyle}}
+\newcommand{\lt}[1][f]{\ensuremath{\textsc{TL}\left(#1\right)}}
+\newcommand{\ltac}{\ensuremath{\textsc{TL}}}
+\newcommand{\mlac}{\ensuremath{\textsc{ML}}}
+\newcommand{\clac}{\ensuremath{\textsc{CL}}}
+\newcommand{\mgrac}{\ensuremath{\text{\upshape{multigr}}}}
+\newcommand{\mgr}[1][f]{\ensuremath{\text{\upshape{multigr}}(#1)}}
+\newcommand{\sop}[1][f]{\ensuremath{\text{\upshape{sop}}(#1)}}
+\newcommand{\cl}[1][f]{\ensuremath{\textsc{CL}(#1)}}
+\newcommand{\gr}[1][f]{\ensuremath{\text{\upshape{gr}}(#1)}}
+\newcommand{\grx}[2]{\ensuremath{\text{\upshape{gr}}_{#2}(#1)}}
+\newcommand{\ml}[1][f]{\ensuremath{\textsc{ML}(#1)}}
+\newcommand{\gen}[1]{\ensuremath{\left\langle#1\right\rangle}}
+\newcommand{\gens}[1]{\ensuremath{\langle#1\rangle}}
+\newcommand{\base}[2]{\ensuremath{\left\{#1_1,\dots,#1_{#2}\right\}}}
+\newcommand{\imon}[2]{\ensuremath{\langle x^{#1}~|~#1\in #2\rangle}}
+\newcommand{\mcds}[2]{\ensuremath{\text{\upshape{mcd}}(#1_1,\dots,#1_{#2})}}
+\usepackage{xparse}
+
+% Definición del comando con dos argumentos opcionales
+\NewDocumentCommand{\mcd}{ O{f} O{g} }{%
+  \ensuremath{\text{\upshape{mcd}}(#1,#2)}
+}
+
+\NewDocumentCommand{\mcm}{ O{f} O{g} }{%
+  \ensuremath{\text{\upshape{mcm}}(#1,#2)}
+}
+
+\NewDocumentCommand{\syz}{ O{\f} O{s} }{%
+  \ensuremath{\text{\upshape{Syz}}(#1_{1},\dots,#1_{#2})}
+}
+\NewDocumentCommand{\res}{ O{f} O{g} }{%
+  \ensuremath{\text{\upshape{resto}}(#1,#2)}
+}
+\NewDocumentCommand{\Spol}{ O{g_i} O{g_j} }{%
+  \ensuremath{\text{\upshape{S}}(#1,#2)}
+}
+
+\NewDocumentCommand{\Spolm}{ O{i} O{j} }{%
+  \ensuremath{\text{\upshape{S}}(\f_{#1},\f_{#2})}
+}
+\NewDocumentCommand{\coc}{ O{f} O{g} }{%
+  \ensuremath{\text{\upshape{cociente}}(#1,#2)}
+}
+
+\NewDocumentCommand{\Kpol}{ O{K} O{x} O{1} O{n} O{} }{%
+  \ensuremath{#1[#2_{#3},\dots,#2_{#4}#5]}
+}
+
+\NewDocumentCommand{\Kp}{ O{K} O{x} O{n} }{%
+  \ensuremath{#1[#2_#3]}
+}
+
+\newcommand{\cor}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\idl}[1]{\ensuremath{\mathbf{I}\left(#1\right)}}
+\newcommand{\idlp}[1]{\ensuremath{\mathbf{I_p}\left(#1\right)}}
+\newcommand{\idla}[1]{\ensuremath{\mathbf{I_a}\left(#1\right)}}
+\newcommand{\idg}[2]{\ensuremath{\left\langle #1_1,\dots,#1_{#2}\right\rangle}}
+\newcommand{\ltidg}[2]{\ensuremath{\left\langle \lt[#1_1],\dots,\lt[#1_{#2}]\right\rangle}}
+\newcommand{\pol}[2]{\ensuremath{\displaystyle\sum_{#1}#2_{#1}x^{#1}}}
+\newcommand{\fun}{\ensuremath{\longrightarrow}}
+\newcommand{\cz}[1]{\ensuremath{\overline{#1}}}
+\newcommand{\x}{\ensuremath{\mathrm{x}}}
+\newcommand{\Va}{\ensuremath{\mathbf{V_a}}}
+\newcommand{\e}{\ensuremath{\mathbf{e}}}
+\newcommand{\V}{\ensuremath{\mathbf{V}}}
+\newcommand{\mbf}{\ensuremath{\mathbf{m}}}
+\newcommand{\f}{\ensuremath{\mathbf{f}}}
+\newcommand{\QQQ}{\textcolor{green!50!black}{QQ}}
+\newcommand{\Lexmtwo}{\textcolor{Aquamarine}{Lex}}
+\newcommand{\monomialmtwo}{\textcolor{Aquamarine}{MonomialOrder}}
+\newcommand{\Weightsmtwo}{\textcolor{Aquamarine}{Weights}}
+\newcommand{\ddd}{\textcolor{green!50!black}{dd}}
+\newcommand{\resmtwo}{\textcolor{blue}{res}}
+\newcommand{\dimmtwo}{\textcolor{blue}{dim}}
+\newcommand{\degreemtwo}{\textcolor{blue}{degree}}
+\newcommand{\gensmtwo}{\textcolor{blue}{gens}}
+\newcommand{\gbmtwo}{\textcolor{blue}{gb}}
+\newcommand{\idealmtwo}{\textcolor{blue}{ideal}}
+\newcommand{\mingensmtwo}{\textcolor{blue}{mingens}}
+\newcommand{\mapmtwo}{\textcolor{blue}{map}}
+\newcommand{\bettimtwo}{\textcolor{blue}{betti}}
+\newcommand{\hpmtwo}{\textcolor{blue}{hilbertPolynomial}}
+\newcommand{\projmtwo}{\textcolor{blue}{Proj}}
+\newcommand{\kernelmtwo}{\textcolor{magenta!32!blue}{kernel}}
+\newcommand{\g}{\ensuremath{\mathbf{g}}}
+\newcommand{\h}{\ensuremath{\mathbf{h}}}
+\newcommand{\im}{\ensuremath{\text{im}}}
+\newcommand{\Vp}{\ensuremath{\mathbf{V_p}}}
+\newcommand{\Vg}[2]{\ensuremath{\mathbf{V}(#1_1,\dots,#1_{#2})}}
+\newcommand{\Vgp}[2]{\ensuremath{\mathbf{V_p}(#1_1,\dots,#1_{#2})}}
+\newcommand{\basis}[2]{\ensuremath{\left\{#1_1,\dots,#1_{#2}\right\}}}
+\newcommand{\de}{\ensuremath{\Rightarrow}}
+\newcommand{\De}{\ensuremath{\Longrightarrow}}
+\newcommand{\iz}{\ensuremath{\Leftarrow}}
+\newcommand{\Iz}{\ensuremath{\Longleftarrow}}
+\newcommand{\deiz}{\ensuremath{\Leftrightarrow
+}}
+\newcommand{\Deiz}{\ensuremath{\Longleftrightarrow
+}}
+\newcommand{\Q}{\ensuremath{\mathbb{Q}}}
+\newcommand{\FF}{\ensuremath{\mathbb{F}}}
+\newcommand{\Fc}{\ensuremath{\mathcal{F}}}
+\newcommand{\GG}{\ensuremath{\mathbb{G}}}
+\newcommand{\G}{\ensuremath{\mathcal{G}}}
+\renewcommand{\H}{\ensuremath{\mathcal{H}}}
+\newcommand{\mi}{\ensuremath{\mathfrak{m}}}
+\newcommand{\sat}[1][I]{\ensuremath{{#1}^{\text{sat}}}}
+\newcommand{\satf}[2]{\ensuremath{#1:{{#2}^{\infty}}}}
+\newcommand{\avec}{\ensuremath{\mathbf{a}}}
+\renewcommand{\a}{\ensuremath{\mathfrak{a}}}
+\newcommand{\point}[1][a]{\bar{#1}}
+\newcommand{\lexi}{\ensuremath{>_{lex}}}
+\newcommand{\lexd}{\ensuremath{<_{lex}}}
+\newcommand{\grlexi}{\ensuremath{>_{grlex}}}
+\newcommand{\grlexd}{\ensuremath{<_{grlex}}}
+\newcommand{\grevlexi}{\ensuremath{>_{grevlex}}}
+\newcommand{\grevlexd}{\ensuremath{<_{grevlex}}}
+\newcommand{\R}{\ensuremath{\mathbb{R}}}
+\newcommand{\Z}{\ensuremath{\mathbb{Z}}}
+\newcommand{\mon}{\ensuremath{\mathcal{M}}}
+\newcommand{\m}[1][\alpha]{\ensuremath{x^{#1}}}
+\newcommand{\F}[1]{\ensuremath{\mathbb{F}_{#1}}}
+\newcommand{\C}{\ensuremath{\mathbb{C}}}
+\renewcommand{\P}{\ensuremath{\mathbb{P}}}
+\newcommand{\N}{\ensuremath{\mathbb{N}}}
+\newcommand{\normal}{\ensuremath{\vartriangleleft}}
+\newcommand{\fr}[1]{\ensuremath{\mathfrak{#1}}}
+\newcommand{\n}[1]{\ensuremath{\mathbf{#1}}}
+\newcommand{\rank}{\ensuremath{\text{rank}}}
+\newcommand{\mcl}[1]{\ensuremath{\mathcal{#1}}}
+\newcommand{\kpol}[1]{\ensuremath{#1[x_1,\dots,x_n]}}
+\newcommand{\Zc}{\ensuremath{\mathbb{Z}_{\geq 0}}}
+\newcommand{\lti}[1][I]{\ensuremath{\gens{\lt[#1]}}}
+
+\newcommand{\refres}[4]{\begin{upshape}
+(\cite[Capítulo #2 $\S$#3, #4]{#1})\end{upshape}}
+
+
+
+
+%=================== Del Inglés al Español ===================
+\newcommand{\sen}{\operatorname{\sen}}% Definimos el comando \sen para el seno
+%en español
+\newcommand{\asignatura}[1]{
+  \def\@asignatura{#1}
+}
+\newcommand{\carrera}[1]{
+  \def\@carrera{#1}
+}
+\newcommand{\titulo}[1]{
+  \def\@titulo{#1}
+}
+
+\newcommand{\profesor}[1]{
+  \def\@profesor{#1}
+}
+\newcommand{\alumnoa}[1]{
+  \def\@alumnoa{#1}
+}
+
+\newcommand{\fecha}[1]{
+  \def\@fecha{#1}
+}
+
+%=================== Código para Macaulay2 ===================
+
+\usepackage{listings}
+\usepackage{xcolor}
+
+\definecolor{beigeClaro}{RGB}{255, 248, 220} 
+
+% Definición del lenguaje Macaulay2
+\lstdefinelanguage{Macaulay2}{
+  morekeywords={ideal, matrix, res, gens, syz, monomialCurveIdeal, load},
+  sensitive=true,
+  morecomment=[l]{--},
+  morestring=[b]"
+}
+
+% Configuración listings
+\lstset{
+  language=Macaulay2,
+  backgroundcolor=\color{beigeClaro},
+  basicstyle=\ttfamily\small,               % Tamaño un poco mayor
+  keywordstyle=\color{blue},
+  emph={QQ}, emphstyle=\color{green!50!black},
+  commentstyle=\color{gray},
+  stringstyle=\color{red},
+  numbers=left,
+  numberstyle=\tiny\color{gray},
+  stepnumber=1,
+  numbersep=5pt,
+  showstringspaces=false,
+  frame=single,
+  breaklines=true,
+  columns=fullflexible,
+  aboveskip=4pt,
+  belowskip=4pt
+}
+
+\usepackage{fancyvrb}
+\DefineVerbatimEnvironment{M2out}{Verbatim}{
+  fontsize=\normalsize,
+  formatcom=\color{black},
+  baselinestretch=0.9,
+  samepage=true,
+  xleftmargin=1em,
+  commandchars=\\\{\}  % Por si luego quieres color o énfasis
+}
+%=================== Bibliografía ===================
+
+\NewDocumentCommand{\fullref}{ O{} O{} O{}}{%
+  Véase en \cite{#1} (Capítulo #2, #3) de la Bibliografía en la página \pageref{bib}
+}
+
+\NewDocumentCommand{\fullrefsection}{ O{} O{} O{} }{%
+  Véase en Sección \ref{#1}: \nameref{#2} (pág. \pageref{#3})
+}
+
+\newcommand{\imgref}[1]{Figura \ref{#1}}
+
+%=================== Portada ===================
+\newcommand*{\maketitlepage}
+ {\begingroup
+  \begin{center}			
+\newcommand{\HRule}{\rule{\linewidth}{0.5mm}}	
+\textsc{Curso 2024/2025}\\
+\textsc{Trabajo Fin de Grado}\\
+
+\vspace{0.4cm}
+
+\HRule \\[0.4cm]																
+{ \Large \bfseries\@titulo}\\[0.2cm]
+\HRule \\[1.5cm]
+
+\textsc{\@alumnoa}\\
+\textsc{Dirigido por \@profesor}
+
+\vspace{0.4cm}
+
+\includegraphics[scale = 0.10]{STY/Escudo_de_la_Universidad_Complutense_de_Madrid.svg.png}
+
+\vspace{1cm}
+
+\textsc{\textbf{ \large \textsc{UNIVERSIDAD COMPLUTENSE DE MADRID}}}
+
+\vspace{1mm}
+
+\textsc{Grado en Matemáticas}
+
+\vspace{1cm}
+
+\textsc{Departamento de Álgebra, Geometría y Topología}\\
+\textsc{Facultad de Ciencias Matemáticas}
+
+\vspace{2cm}
+
+\@fecha
+
+
+
+							 						
+  \endgroup}

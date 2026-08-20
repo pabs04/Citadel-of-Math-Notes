@@ -1,0 +1,13 @@
+{
+    "files.exclude": {
+        "**/.git": true,
+        "**/.svn": true,
+        "**/.hg": true,
+        "**/.DS_Store": true,
+        "**/Thumbs.db": true,
+        "**/c:\\Users\\Pablo\\Desktop\\PABLO\\Proyectos Latex\\Apuntes Ecuaciones Algebraicas\\main.aux": true,
+        "**/c:\\Users\\Pablo\\Desktop\\PABLO\\Proyectos Latex\\Apuntes Ecuaciones Algebraicas\\main.log": true,
+        "**/c:\\Users\\Pablo\\Desktop\\PABLO\\Proyectos Latex\\Apuntes Ecuaciones Algebraicas\\main.gz": true,
+        "**/c:\\Users\\Pablo\\Desktop\\PABLO\\Proyectos Latex\\Apuntes Ecuaciones Algebraicas\\main.out": true
+    }
+}

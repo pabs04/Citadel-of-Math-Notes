@@ -1,0 +1,9 @@
+\babel@toc {spanish}{}\relax 
+\babel@toc {spanish}{}\relax 
+\contentsline {chapter}{\numberline {1}Preliminares: Definiciones y Resultados}{3}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Teoría de Grupos Elemental}{3}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Homomorfismos: Teoremas de Isomorfía}{6}{subsection.1.1.1}%
+\contentsline {paragraph}{\underline {\large Teoremas de Isomorfía}}{7}{section*.2}%
+\contentsline {subsection}{\numberline {1.1.2}Ejemplos de Grupos}{8}{subsection.1.1.2}%
+\contentsline {paragraph}{\large Grupos Abelianos Finitos}{8}{section*.3}%
+\contentsline {section}{\numberline {1.2}Teoría de Anillos Elemental}{9}{section.1.2}%
