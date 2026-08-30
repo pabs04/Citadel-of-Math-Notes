@@ -46,7 +46,7 @@
 \newtheorem{obydefi}[cont]{Observaciones y definiciones}
 \newtheorem{ej}[cont]{Ejemplos}
 \newtheorem{ejem}[cont]{Ejemplo}
-\theoremstyle{theorem}
+\theoremstyle{plain}
 \newtheorem{teo}[cont]{Teorema}
 \newtheorem{coro}[cont]{Corolario}
 \newtheorem{propo}[cont]{Proposición}
@@ -85,7 +85,6 @@
 \renewcommand{\appendixtocname}{Apéndices}
 \renewcommand{\appendixpagename}{Apéndices} 
 %=================== Hipervínculos ===================
-\usepackage[colorlinks=true,plainpages=false,citecolor=magenta,linkcolor=blue]{hyperref}
 \usepackage{labelschanged}
 %\usepackage{hyperref} 
 \usepackage{fancyhdr} 
@@ -153,6 +152,7 @@
 }
 
 \newcommand{\cor}[1]{\ensuremath{\left\{#1\right\}}}
+\newcommand{\U}{\mathcal{U}}
 \newcommand{\idl}[1]{\ensuremath{\mathbf{I}\left(#1\right)}}
 \newcommand{\idlp}[1]{\ensuremath{\mathbf{I_p}\left(#1\right)}}
 \newcommand{\idla}[1]{\ensuremath{\mathbf{I_a}\left(#1\right)}}
@@ -186,6 +186,7 @@
 \newcommand{\kernelmtwo}{\textcolor{magenta!32!blue}{kernel}}
 \newcommand{\g}{\ensuremath{\mathbf{g}}}
 \newcommand{\h}{\ensuremath{\mathbf{h}}}
+\newcommand{\D}{\ensuremath{\mathcal{D}}}
 \newcommand{\im}{\ensuremath{\text{im}}}
 \newcommand{\Vp}{\ensuremath{\mathbf{V_p}}}
 \newcommand{\Vg}[2]{\ensuremath{\mathbf{V}(#1_1,\dots,#1_{#2})}}
@@ -194,6 +195,7 @@
 \newcommand{\de}{\ensuremath{\Rightarrow}}
 \newcommand{\De}{\ensuremath{\Longrightarrow}}
 \newcommand{\iz}{\ensuremath{\Leftarrow}}
+\newcommand{\Aut}{\ensuremath{\text{Aut}}}
 \newcommand{\Iz}{\ensuremath{\Longleftarrow}}
 \newcommand{\deiz}{\ensuremath{\Leftrightarrow
 }}
