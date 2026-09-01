@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.3)  1 SEP 2026 18:19
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.3)  2 SEP 2026 00:58
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1870,17 +1870,22 @@ Package cleveref Info: loaded `spanish' language definitions on input line 657.
 
 Package cleveref Info: loaded `spanish' language definitions on input line 672.
 
-Package cleveref Info: loaded `spanish' language definitions on input line 682.
+Package cleveref Info: loaded `spanish' language definitions on input line 683.
 
-Package cleveref Info: loaded `spanish' language definitions on input line 682.
+Package cleveref Info: loaded `spanish' language definitions on input line 688.
+
+Package cleveref Info: loaded `spanish' language definitions on input line 688.
 
  [17]
+Package cleveref Info: loaded `spanish' language definitions on input line 703.
+
+ [18]
 \bbl@ensure@spanish {Cap\'\i tulo} 2.
-Package cleveref Info: loaded `spanish' language definitions on input line 682.
+Package cleveref Info: loaded `spanish' language definitions on input line 703.
 
-[18
+[19
 
-] [19
+] [20
 
 
 ] (./main.aux
@@ -1903,9 +1908,9 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 ### semi simple group (level 1) entered at line 117 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 51153 strings out of 467159
- 1028768 string characters out of 5413462
- 2033283 words of memory out of 5000000
+ 51156 strings out of 467159
+ 1028791 string characters out of 5413462
+ 2033282 words of memory out of 5000000
  79543 multiletter control sequences out of 15000+600000
  750614 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
@@ -1933,10 +1938,10 @@ t/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2026/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2026/texmf-dist/fonts/
 type1/public/old-arrows/oasy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/publ
 ic/old-arrows/oasy8.pfb>
-Output written on main.pdf (19 pages, 771331 bytes).
+Output written on main.pdf (20 pages, 775977 bytes).
 PDF statistics:
- 461 PDF objects out of 1000 (max. 8388607)
- 354 compressed objects within 4 object streams
- 102 named destinations out of 1000 (max. 500000)
+ 469 PDF objects out of 1000 (max. 8388607)
+ 361 compressed objects within 4 object streams
+ 105 named destinations out of 1000 (max. 500000)
  207 words of extra memory for PDF output out of 10000 (max. 10000000)
 

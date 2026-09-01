@@ -633,7 +633,7 @@ Este tema impartido en Estructuras Algebraicas es muy importante, pues permite d
 	
 	\vspace{2mm}
 	
-	Dada una acción $G\times X\rightarrow X$, en $X$, podemos definir una relación de equivalencia $x\sim y:~\exists~g\in G~|~\tilde{g}(x)=y$; que claramente es reflexiva, dado que $x=\tilde{1_G}(x)$, simétrica porque existe $(\tilde{g})^{-1}:=\widetilde{g^{-1}}$, y transitiva. La clase de equivalencia de un elemento $x\in X$ sobre la acción de $G$ se la conoce como $G$-órbita de $x$, o simplemente órbita de $x$ si se entiende por el contexto, y se denota por $O_x:=\{\tilde{g}(x)~|~g\in G\}$. El \textbf{estabilizador} de un punto $x\in X$ bajo la acción de $G$ es el subgrupo de $G$ dado por $\Stab{G}{x}:=\{g\in G~|~\tilde{g}(x)=x\}$.
+	Dada una acción $G\times X\rightarrow X$, en $X$, podemos definir una relación de equivalencia $x\sim y:~\exists~g\in G~|~\tilde{g}(x)=y$; que claramente es reflexiva, dado que $x=\widetilde{1_G}(x)$, simétrica porque existe $(\tilde{g})^{-1}:=\widetilde{g^{-1}}$, y transitiva. La clase de equivalencia de un elemento $x\in X$ sobre la acción de $G$ se la conoce como $G$-órbita de $x$, o simplemente órbita de $x$ si se entiende por el contexto, y se denota por $O_x:=\{\tilde{g}(x)~|~g\in G\}$. El \textbf{estabilizador} de un punto $x\in X$ bajo la acción de $G$ es el subgrupo de $G$ dado por $\Stab{G}{x}:=\{g\in G~|~\tilde{g}(x)=x\}$.
 \end{defi}
 
 \vspace{2mm}
@@ -673,7 +673,28 @@ Ahora, resumiremos las propiedades y los resultados inmediatos de esta nueva her
 \end{proof}
 \subsection{Teoremas de Sylow}
 
-Vamos a terminar la \textit{Teoría de Grupos} necesaria para este curso, con unos de los teoremas más importantes en cuestión al número de subgrupos de un grupo. Estos teoremas toman relevancia a la hora de estudiar la cantidad de subextensiones de cuerpos que existen de una extensión dada. Pronto veremos que significa todo esto.
+Vamos a terminar la \textit{Teoría de Grupos} necesaria para este curso, con varios de los teoremas más relevantes en relación al número de subgrupos de un grupo. Estos teoremas toman relevancia a la hora de estudiar la cantidad de subextensiones de cuerpos que existen de una extensión dada. Pronto veremos que significa todo esto. De ahora en adelante, fijaremos un primo $p$ y enteros positivos $m,n$ tales que el orden de un grupo $G$ sea $|G|=mp^n$ con $m \nmid p$. Los subgrupos de $G$ de orden $p^m$ para $1\leq m\leq n$ se llaman $p$-subgrupos y, en particular, para $m=n$ se conocen como \textbf{$p$-subgrupos de Sylow}.
+
+\begin{teo}[\textbf{Primer Teorema de Sylow}]
+	Sea $G$ un grupo con $|G|=mp^n$ donde $p$ es primo y $m\nmid p$, sean $H,K$ dos $p$-subgrupos de Sylow. Entonces $H$ y $K$ son subgrupos conjugados. Además, $H$ es normal si y sólo si es el único $p$-subgrupo de Sylow.
+\end{teo}
+
+\begin{proof}
+	Consideramos en $G$ la relación de equivalencia de $K$ por la derecha y tomamos el conjunto cociente $X:=G/R_K$ y la acción de $H$ sobre $X$ como\begin{equation*}
+		\begin{array}{ccc}
+			H\times X & \longrightarrow & X\\
+			(h,Kg) & \longmapsto & \tilde{h}(Kg) = Kgh
+		\end{array}
+	\end{equation*}El cardinal de $X$ es $|X|=|G|/|K|=m$, entonces la fórmula de las órbitas (Propiedades \ref{propi:1.43} (5)) se queda en $m = \sum_{kg\in R}[H:\Stab{H}{Kg}]$. Como $m$ no divide a $p$, entonces existe algún $Kg_0$ cumpliendo que el índice $[H:\Stab{H}{Kg_0}]=1$, luego $H=\Stab{H}{Kg_0}$ y por tanto $$Kg_0=\tilde{h}(Kg_0)=Kg_0h \De g_0hg_0^{-1}\in K,~~\forall~h\in H$$Luego tenemos que $g_0Hg_0^{-1}\subset K$ y como $|g_0Hg_0^{-1}|=|H|=p^n=|K|$, deducimos que $K = g_0Hg_0^{-1}$ y $H,K$ son conjugados. Por último, bajo otro supuesto y usando lo ya probado, si $H$ es el único $p$-subgrupo de Sylow, entonces sus conjugados coinciden con él mismo, es decir, $gHg^{-1}=H \De gh=Hg$ para todo $g\in G$, luego $H$ es normal. El recíproco es inmediato.
+\end{proof}
+
+\begin{teo}[\textbf{Segundo Teorema de Sylow}]
+	Sea $G$ un grupo en las condiciones del enunciado anterior. Entonces:\begin{enumerate}
+		\item[i)] Fijado $0\leq k\leq n-1$ y un subgrupo $H_k<G$ de orden $p^k$, existe un subgrupo $H_{k+1}$ de orden $p^{k+1}$ tal que $H_k\normal H_{k+1}$.
+		\item[ii)] Existen subgrupos $H_1,\dots,H_n < G$ de órdenes $p,p^2,\dots,p^n$ respectivamente tales que $H_k\normal H_{k+1}$ para cada $1\leq k\leq n-1$.
+		\item[iii)] Todo $p$-subgrupo de $G$ está contenido en algún $p$-subgrupo de Sylow de $G$.
+	\end{enumerate}
+\end{teo}
 \section{Teoría de Anillos Elemental}
 
 \subsection{Ideales, Homomorfismos y Teoremas de Isomorfía}
