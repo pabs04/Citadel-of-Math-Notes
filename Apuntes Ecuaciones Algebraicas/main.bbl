@@ -18,7 +18,7 @@
 
 
 \refsection{0}
-  \datalist[entry]{anyt/global//global/global/global}
+  \datalist[entry]{nty/global//global/global/global}
     \entry{Gamboagrupos}{book}{}{}
       \name{author}{4}{}{%
         {{hash=a7db1c4b6af06df2509c995dfa2012ad}{%
@@ -61,7 +61,6 @@
       \strng{authornamehash}{70ca3c7dc54c4104c44d953ff93eddf0}
       \strng{authorfullhash}{4588941c05a19fd483188bf0d1aa3f2d}
       \strng{authorfullhashraw}{4588941c05a19fd483188bf0d1aa3f2d}
-      \field{labelalpha}{Buj+87}
       \field{sortinit}{B}
       \field{sortinithash}{d7095fff47cda75ca2589920aae98399}
       \field{labelnamesource}{author}
@@ -96,7 +95,6 @@
       \strng{authornamehash}{738c17ee73dca61bda6e1cedbfa95667}
       \strng{authorfullhash}{738c17ee73dca61bda6e1cedbfa95667}
       \strng{authorfullhashraw}{738c17ee73dca61bda6e1cedbfa95667}
-      \field{labelalpha}{Eta15}
       \field{sortinit}{E}
       \field{sortinithash}{8da8a182d344d5b9047633dfc0cc9131}
       \field{labelnamesource}{author}

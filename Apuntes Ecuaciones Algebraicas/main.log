@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.3)  30 AUG 2026 04:22
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.3)  1 SEP 2026 18:19
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1123,7 +1123,7 @@ File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 ))
 (c:/texlive/2026/texmf-dist/tex/generic/babel/locale/es/babel-spanish.tex)
 Package babel Info: Importing data for 'spanish'
-(babel)             from babel-es.ini. Reported on input line 39.
+(babel)             from babel-es.ini. Reported on input line 56.
 
 (c:/texlive/2026/texmf-dist/tex/latex/xurl/xurl.sty
 Package: xurl 2022/01/09 v 0.10 modify URL breaks
@@ -1487,8 +1487,8 @@ Package cleveref Info: `amsthm' support loaded on input line 3026.
 Package cleveref Info: `listings' support loaded on input line 3131.
 )
 ==> First Aid for cleveref.sty applied!
-Package hyperref Info: Option `colorlinks' set `true' on input line 92.
-Package hyperref Info: Option `breaklinks' set `true' on input line 92.
+Package hyperref Info: Option `colorlinks' set `true' on input line 109.
+Package hyperref Info: Option `breaklinks' set `true' on input line 109.
 Package csquotes Info: Checking for multilingual support...
 Package csquotes Info: ... found 'babel' package.
 Package csquotes Info: Adjusting default style.
@@ -1500,24 +1500,24 @@ LaTeX Warning: Unused global option(s):
 (./main.aux)
 \openout1 = `main.aux'.
 
-LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
-LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 99.
-LaTeX Font Info:    ... okay on input line 99.
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 116.
+LaTeX Font Info:    ... okay on input line 116.
 
 *geometry* driver: auto-detecting
 *geometry* detected driver: pdftex
@@ -1526,8 +1526,8 @@ LaTeX Font Info:    ... okay on input line 99.
 * paper: a4paper
 * layout: <same size as paper>
 * layoutoffset:(h,v)=(0.0pt,0.0pt)
-* modes: 
-* h-part:(L,W,R)=(81.94394pt, 433.62pt, 81.94394pt)
+* modes: twoside 
+* h-part:(L,W,R)=(65.55515pt, 433.62pt, 98.33273pt)
 * v-part:(T,H,B)=(77.84674pt, 650.43pt, 116.77011pt)
 * \paperwidth=597.50787pt
 * \paperheight=845.04684pt
@@ -1536,11 +1536,11 @@ LaTeX Font Info:    ... okay on input line 99.
 * \oddsidemargin=-15.36449pt
 * \evensidemargin=-15.36449pt
 * \topmargin=-15.36449pt
-* \headheight=13.6pt
+* \headheight=14.0pt
 * \headsep=25.0pt
 * \topskip=10.0pt
 * \footskip=30.0pt
-* \marginparwidth=65.0pt
+* \marginparwidth=121.0pt
 * \marginparsep=11.0pt
 * \columnsep=10.0pt
 * \skip\footins=9.0pt plus 4.0pt minus 2.0pt
@@ -1548,8 +1548,8 @@ LaTeX Font Info:    ... okay on input line 99.
 * \voffset=0.0pt
 * \mag=1000
 * \@twocolumnfalse
-* \@twosidefalse
-* \@mparswitchfalse
+* \@twosidetrue
+* \@mparswitchtrue
 * \@reversemarginfalse
 * (1in=72.27pt=25.4mm, 1cm=28.453pt)
 
@@ -1609,15 +1609,15 @@ Package caption Info: wrapfig package is loaded.
 Package caption Info: End \AtBeginDocument code.
 \symgns@font=\mathgroup8
 LaTeX Font Info:    Overwriting symbol font `gns@font' in version `bold'
-(Font)                  TS1/lmr/m/n --> TS1/lmr/b/n on input line 99.
-Package gensymb Info: Math companion symbols declared on input line 99.
-LaTeX Info: Redefining \degree on input line 99.
-LaTeX Info: Redefining \celsius on input line 99.
+(Font)                  TS1/lmr/m/n --> TS1/lmr/b/n on input line 116.
+Package gensymb Info: Math companion symbols declared on input line 116.
+LaTeX Info: Redefining \degree on input line 116.
+LaTeX Info: Redefining \celsius on input line 116.
 Package gensymb Info: Using text companion symbols for \degree, \celsius and \p
-erthousand on input line 99.
-LaTeX Info: Redefining \ohm on input line 99.
-Package gensymb Info: Using \textohm for \ohm on input line 99.
-Package gensymb Info: Using \textmu for \micro on input line 99.
+erthousand on input line 116.
+LaTeX Info: Redefining \ohm on input line 116.
+Package gensymb Info: Using \textohm for \ohm on input line 116.
+Package gensymb Info: Using \textmu for \micro on input line 116.
 
 (c:/texlive/2026/texmf-dist/tex/latex/pdflscape/pdflscape.sty
 Package: pdflscape 2025-06-23 v0.14 Display of landscape pages in PDF
@@ -1632,7 +1632,7 @@ Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
 Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
 ))
 \c@lstlisting=\count553
-Package hyperref Info: Link coloring ON on input line 99.
+Package hyperref Info: Link coloring ON on input line 116.
  (./main.out)
 (./main.out)
 \@outlinefile=\write6
@@ -1652,67 +1652,79 @@ Package biblatex Info: Trying to load bibliographic data...
 Package biblatex Info: ... file 'main.bbl' found.
 
 (./main.bbl)
-Package biblatex Info: Reference section=0 on input line 99.
-Package biblatex Info: Reference segment=0 on input line 99.
+Package biblatex Info: Reference section=0 on input line 116.
+Package biblatex Info: Reference segment=0 on input line 116.
 Package babel Info: Main language set to 'spanish'.
-Package cleveref Info: loaded `spanish' language definitions on input line 114.
-
 LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 1
-20.
+23.
  (c:/texlive/2026/texmf-dist/tex/latex/lm/ot1lmr.fd
 File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OML+lmm on input line 1
-20.
+23.
 
 (c:/texlive/2026/texmf-dist/tex/latex/lm/omllmm.fd
 File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
-120.
+123.
 
 (c:/texlive/2026/texmf-dist/tex/latex/lm/omslmsy.fd
 File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
-120.
+123.
 
 (c:/texlive/2026/texmf-dist/tex/latex/lm/omxlmex.fd
 File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <10> on input line 120.
+(Font)              <24.88> on input line 123.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <7> on input line 120.
+(Font)              <20.74> on input line 123.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <5> on input line 120.
-LaTeX Font Info:    Trying to load font information for U+msa on input line 120
+(Font)              <17.28> on input line 123.
+LaTeX Font Info:    Trying to load font information for U+msa on input line 123
 .
 
 (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsa.fd
 File: umsa.fd 2013/01/14 v3.01 AMS symbols A
 )
-LaTeX Font Info:    Trying to load font information for U+msb on input line 120
+LaTeX Font Info:    Trying to load font information for U+msb on input line 123
 .
 
 (c:/texlive/2026/texmf-dist/tex/latex/amsfonts/umsb.fd
 File: umsb.fd 2013/01/14 v3.01 AMS symbols B
 )
 LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
-20.
+23.
 
 (c:/texlive/2026/texmf-dist/tex/latex/lm/ts1lmr.fd
 File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
-<logo_ucm.png, id=71, 3854.4pt x 2168.1pt>
+LaTeX Font Info:    Trying to load font information for U+euf on input line 123
+.
+
+(c:/texlive/2026/texmf-dist/tex/latex/amsfonts/ueuf.fd
+File: ueuf.fd 2013/01/14 v3.01 Euler Fraktur
+)
+Package cleveref Info: loaded `spanish' language definitions on input line 131.
+
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 137.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 137.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <5> on input line 137.
+<logo_ucm.png, id=75, 3854.4pt x 2168.1pt>
 File: logo_ucm.png Graphic file (type png)
 <use logo_ucm.png>
-Package pdftex.def Info: logo_ucm.png  used on input line 153.
+Package pdftex.def Info: logo_ucm.png  used on input line 170.
 (pdftex.def)             Requested size: 217.66211pt x 122.40524pt.
-<logo_mat.png, id=72, 1456.44125pt x 409.53pt>
+<logo_mat.png, id=76, 1456.44125pt x 409.53pt>
 File: logo_mat.png Graphic file (type png)
 <use logo_mat.png>
-Package pdftex.def Info: logo_mat.png  used on input line 158.
+Package pdftex.def Info: logo_mat.png  used on input line 175.
 (pdftex.def)             Requested size: 217.66211pt x 61.20187pt.
  [1
 
@@ -1721,7 +1733,7 @@ texmf-dist/fonts/enc/dvips/lm/lm-ec.enc}{c:/texlive/2026/texmf-dist/fonts/enc/d
 vips/lm/lm-rm.enc}{c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathit.enc}
 {c:/texlive/2026/texmf-dist/fonts/enc/dvips/lm/lm-mathsy.enc} <./logo_ucm.png> 
 <./logo_mat.png>]
-Package cleveref Info: loaded `spanish' language definitions on input line 164.
+Package cleveref Info: loaded `spanish' language definitions on input line 181.
 
 
 (./main.toc
@@ -1731,88 +1743,147 @@ Package cleveref Info: loaded `spanish' language definitions on input line 2.
 \tf@toc=\write7
 \openout7 = `main.toc'.
 
+ [2
 
-pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
-been already used, duplicate ignored
-<to be read again> 
-                   \relax 
-l.165 \newpage
-               [1
+]
+Underfull \hbox (badness 10000) in paragraph at lines 190--191
 
-] [2]
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 200--201
+
+ []
+
+
+Underfull \hbox (badness 10000) in paragraph at lines 208--209
+
+ []
+
+[3]
 \bbl@ensure@spanish {Cap\'\i tulo} 1.
-Package cleveref Info: loaded `spanish' language definitions on input line 179.
+Package cleveref Info: loaded `spanish' language definitions on input line 219.
 
-[3
+[4
 
 {c:/texlive/2026/texmf-dist/fonts/enc/dvips/old-arrows/oasy.enc}{c:/texlive/202
 6/texmf-dist/fonts/enc/dvips/lm/lm-ts1.enc}{c:/texlive/2026/texmf-dist/fonts/en
 c/dvips/lm/lm-mathex.enc}]
-Package cleveref Info: loaded `spanish' language definitions on input line 230.
+Package cleveref Info: loaded `spanish' language definitions on input line 270.
 
-Package cleveref Info: loaded `spanish' language definitions on input line 240.
+Package cleveref Info: loaded `spanish' language definitions on input line 280.
 
- [4]
-Package cleveref Info: loaded `spanish' language definitions on input line 269.
-
- [5]
 Package cleveref Info: loaded `spanish' language definitions on input line 291.
 
+Package cleveref Info: loaded `spanish' language definitions on input line 291.
+
+ [5]
+Package cleveref Info: loaded `spanish' language definitions on input line 309.
+
+Package cleveref Info: loaded `spanish' language definitions on input line 321.
+
  [6]
-Package cleveref Info: loaded `spanish' language definitions on input line 316.
+Package cleveref Info: loaded `spanish' language definitions on input line 331.
 
-Package cleveref Info: loaded `spanish' language definitions on input line 324.
+Package cleveref Info: loaded `spanish' language definitions on input line 354.
 
-Package cleveref Info: loaded `spanish' language definitions on input line 335.
-
-Package cleveref Info: loaded `spanish' language definitions on input line 341.
+Package cleveref Info: loaded `spanish' language definitions on input line 354.
 
  [7]
-Package cleveref Info: loaded `spanish' language definitions on input line 366.
+Package cleveref Info: loaded `spanish' language definitions on input line 356.
+
+Package cleveref Info: loaded `spanish' language definitions on input line 364.
+
+Package cleveref Info: loaded `spanish' language definitions on input line 375.
+
+Package cleveref Info: loaded `spanish' language definitions on input line 381.
+
+Package cleveref Info: loaded `spanish' language definitions on input line 385.
 
  [8]
-Package cleveref Info: loaded `spanish' language definitions on input line 372.
+Package cleveref Info: loaded `spanish' language definitions on input line 406.
 
-Package cleveref Info: loaded `spanish' language definitions on input line 390.
+Package cleveref Info: loaded `spanish' language definitions on input line 407.
 
-Package cleveref Info: loaded `spanish' language definitions on input line 397.
+Package cleveref Info: loaded `spanish' language definitions on input line 407.
 
  [9]
-Underfull \hbox (badness 10000) in paragraph at lines 410--411
+Package cleveref Info: loaded `spanish' language definitions on input line 412.
+
+Package cleveref Info: loaded `spanish' language definitions on input line 430.
+
+Package cleveref Info: loaded `spanish' language definitions on input line 437.
+
+Package cleveref Info: loaded `spanish' language definitions on input line 449.
+
+ [10]
+Underfull \hbox (badness 10000) in paragraph at lines 450--451
 
  []
 
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <8> on input line 417.
+(Font)              <8> on input line 457.
 LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <6> on input line 417.
-Package cleveref Info: loaded `spanish' language definitions on input line 423.
+(Font)              <6> on input line 457.
+Package cleveref Info: loaded `spanish' language definitions on input line 463.
 
-[10]
-Package cleveref Info: loaded `spanish' language definitions on input line 444.
+Package cleveref Info: loaded `spanish' language definitions on input line 471.
 
- [11]
-LaTeX Font Info:    External font `lmex10' loaded for size
-(Font)              <12> on input line 468.
-Package cleveref Info: loaded `spanish' language definitions on input line 473.
+Package cleveref Info: loaded `spanish' language definitions on input line 471.
 
-Package cleveref Info: loaded `spanish' language definitions on input line 473.
-
-Package cleveref Info: loaded `spanish' language definitions on input line 473.
-
-Package cleveref Info: loaded `spanish' language definitions on input line 473.
-
- [12]
-\bbl@ensure@spanish {Cap\'\i tulo} 2.
+[11]
 Package cleveref Info: loaded `spanish' language definitions on input line 484.
 
-[13
+Package cleveref Info: loaded `spanish' language definitions on input line 495.
 
-]
+ [12]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 508.
 
-LaTeX Warning: Empty bibliography on input line 492.
+Underfull \hbox (badness 10000) in paragraph at lines 517--518
 
-(./main.aux
+ []
+
+Package cleveref Info: loaded `spanish' language definitions on input line 535.
+
+Package cleveref Info: loaded `spanish' language definitions on input line 535.
+
+[13]
+Package cleveref Info: loaded `spanish' language definitions on input line 537.
+
+Package cleveref Info: loaded `spanish' language definitions on input line 567.
+
+Package cleveref Info: loaded `spanish' language definitions on input line 568.
+
+ [14]
+Package cleveref Info: loaded `spanish' language definitions on input line 584.
+
+Package cleveref Info: loaded `spanish' language definitions on input line 609.
+
+Package cleveref Info: loaded `spanish' language definitions on input line 609.
+
+ [15]
+Package cleveref Info: loaded `spanish' language definitions on input line 648.
+
+ [16]
+Package cleveref Info: loaded `spanish' language definitions on input line 657.
+
+Package cleveref Info: loaded `spanish' language definitions on input line 672.
+
+Package cleveref Info: loaded `spanish' language definitions on input line 682.
+
+Package cleveref Info: loaded `spanish' language definitions on input line 682.
+
+ [17]
+\bbl@ensure@spanish {Cap\'\i tulo} 2.
+Package cleveref Info: loaded `spanish' language definitions on input line 682.
+
+[18
+
+] [19
+
+
+] (./main.aux
 Package cleveref Info: loaded `spanish' language definitions on input line 11.
 Package cleveref Info: loaded `spanish' language definitions on input line 12.
 )
@@ -1820,76 +1891,52 @@ Package cleveref Info: loaded `spanish' language definitions on input line 12.
 LaTeX2e <2026-06-01>
 L3 programming layer <2026-07-20>
  ***********
-
-
-LaTeX Warning: There were undefined references.
-
-
-Package rerunfilecheck Warning: File `main.out' has changed.
-(rerunfilecheck)                Rerun to get outlines right
-(rerunfilecheck)                or use package `bookmark'.
-
-Package rerunfilecheck Info: Checksums for `main.out':
-(rerunfilecheck)             Before: 4C057A1F56C32001D8CEDFA3C51B5B72;1959
-(rerunfilecheck)             After:  461BB483BD5BA94B953E30C462E2E904;1851.
-
-Package biblatex Warning: Please (re)run Biber on the file:
-(biblatex)                main
-(biblatex)                and rerun LaTeX afterwards.
-
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: 90F95017E15BD7C1F09DF0E764AE956B;2117.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
  )
 (\end occurred inside a group at level 2)
 
-### semi simple group (level 2) entered at line 166 (\begingroup)
-### semi simple group (level 1) entered at line 100 (\begingroup)
+### semi simple group (level 2) entered at line 183 (\begingroup)
+### semi simple group (level 1) entered at line 117 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 51011 strings out of 467159
- 1026673 string characters out of 5413462
- 2031117 words of memory out of 5000000
- 79441 multiletter control sequences out of 15000+600000
- 714187 words of font info for 101 fonts, out of 8000000 for 9000
+ 51153 strings out of 467159
+ 1028768 string characters out of 5413462
+ 2033283 words of memory out of 5000000
+ 79543 multiletter control sequences out of 15000+600000
+ 750614 words of font info for 138 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
- 121i,12n,122p,2507b,2429s stack positions out of 10000i,1000n,20000p,200000b,200000s
-
-pdfTeX warning (dest): name{cite.0@Gamboaanillos} has been referenced but does 
-not exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{cite.0@Gamboagrupos} has been referenced but does n
-ot exist, replaced by a fixed one
-
-
-pdfTeX warning (dest): name{chapter*.8} has been referenced but does not exist,
- replaced by a fixed one
-
-<c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texlive/2026/t
-exmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2026/texmf-dist/fonts/ty
-pe1/public/lm/lmbxi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lme
-x10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texliv
-e/2026/texmf-dist/fonts/type1/public/lm/lmmi5.pfb><c:/texlive/2026/texmf-dist/f
-onts/type1/public/lm/lmmi6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/l
-m/lmmi7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/tex
-live/2026/texmf-dist/fonts/type1/public/lm/lmr10.pfb><c:/texlive/2026/texmf-dis
-t/fonts/type1/public/lm/lmr12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/publi
-c/lm/lmr5.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/te
-xlive/2026/texmf-dist/fonts/type1/public/lm/lmr7.pfb><c:/texlive/2026/texmf-dis
-t/fonts/type1/public/lm/lmr8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public
-/lm/lmri10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:
-/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy5.pfb><c:/texlive/2026/texmf
--dist/fonts/type1/public/lm/lmsy6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/p
-ublic/lm/lmsy7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy8.pfb>
-<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/
-texlive/2026/texmf-dist/fonts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texl
-ive/2026/texmf-dist/fonts/type1/public/old-arrows/oasy10.pfb><c:/texlive/2026/t
-exmf-dist/fonts/type1/public/old-arrows/oasy8.pfb>
-Output written on main.pdf (14 pages, 683485 bytes).
+ 121i,12n,122p,2518b,2439s stack positions out of 10000i,1000n,20000p,200000b,200000s
+<c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/euler/e
+ufm10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmbx10.pfb><c:/texl
+ive/2026/texmf-dist/fonts/type1/public/lm/lmbx12.pfb><c:/texlive/2026/texmf-dis
+t/fonts/type1/public/lm/lmbx8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/publi
+c/lm/lmbxi10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmcsc10.pfb>
+<c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmex10.pfb><c:/texlive/2026/t
+exmf-dist/fonts/type1/public/lm/lmmi10.pfb><c:/texlive/2026/texmf-dist/fonts/ty
+pe1/public/lm/lmmi5.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi6
+.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmmi7.pfb><c:/texlive/20
+26/texmf-dist/fonts/type1/public/lm/lmmi8.pfb><c:/texlive/2026/texmf-dist/fonts
+/type1/public/lm/lmr10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lm
+r12.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmr5.pfb><c:/texlive/
+2026/texmf-dist/fonts/type1/public/lm/lmr6.pfb><c:/texlive/2026/texmf-dist/font
+s/type1/public/lm/lmr7.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lm
+r8.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmri10.pfb><c:/texlive
+/2026/texmf-dist/fonts/type1/public/lm/lmsy10.pfb><c:/texlive/2026/texmf-dist/f
+onts/type1/public/lm/lmsy5.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/l
+m/lmsy6.pfb><c:/texlive/2026/texmf-dist/fonts/type1/public/lm/lmsy7.pfb><c:/tex
+live/2026/texmf-dist/fonts/type1/public/lm/lmsy8.pfb><c:/texlive/2026/texmf-dis
+t/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2026/texmf-dist/fo
+nts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2026/texmf-dist/fonts/
+type1/public/old-arrows/oasy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/publ
+ic/old-arrows/oasy8.pfb>
+Output written on main.pdf (19 pages, 771331 bytes).
 PDF statistics:
- 378 PDF objects out of 1000 (max. 8388607)
- 284 compressed objects within 3 object streams
- 77 named destinations out of 1000 (max. 500000)
- 199 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 461 PDF objects out of 1000 (max. 8388607)
+ 354 compressed objects within 4 object streams
+ 102 named destinations out of 1000 (max. 500000)
+ 207 words of extra memory for PDF output out of 10000 (max. 10000000)
 

@@ -1,15 +1,18 @@
 \babel@toc {spanish}{}\relax 
 \babel@toc {spanish}{}\relax 
-\contentsline {chapter}{\numberline {1}Preliminares: Definiciones y Resultados}{3}{chapter.1}%
-\contentsline {section}{\numberline {1.1}Teoría de Grupos Elemental}{3}{section.1.1}%
-\contentsline {subsection}{\numberline {1.1.1}Homomorfismos: Teoremas de Isomorfía}{6}{subsection.1.1.1}%
-\contentsline {paragraph}{\underline {\large Teoremas de Isomorfía}}{7}{section*.2}%
-\contentsline {subsection}{\numberline {1.1.2}Ejemplos de Grupos}{8}{subsection.1.1.2}%
-\contentsline {paragraph}{\large Grupos Abelianos Finitos}{8}{section*.3}%
-\contentsline {paragraph}{\large Grupos Diédricos}{10}{section*.4}%
-\contentsline {paragraph}{\large Grupos de Permutaciones y sus subgrupos}{12}{section*.6}%
-\contentsline {subsection}{\numberline {1.1.3}Teoremas de Sylow}{12}{subsection.1.1.3}%
-\contentsline {section}{\numberline {1.2}Teoría de Anillos Elemental}{12}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Ideales, Homomorfismos y Teoremas de Isomorfía}{12}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Ejemplos}{12}{subsection.1.2.2}%
-\contentsline {chapter}{\numberline {2}Introducción: Extensiones de Cuerpos}{13}{chapter.2}%
+\contentsline {chapter}{\numberline {1}Preliminares: Definiciones y Resultados}{4}{chapter.1}%
+\contentsline {section}{\numberline {1.1}Teoría de Grupos Elemental}{4}{section.1.1}%
+\contentsline {subsection}{\numberline {1.1.1}Homomorfismos: Teoremas de Isomorfía}{7}{subsection.1.1.1}%
+\contentsline {paragraph}{\underline {\large Teoremas de Isomorfía}}{8}{section*.2}%
+\contentsline {subsection}{\numberline {1.1.2}Ejemplos de Grupos}{9}{subsection.1.1.2}%
+\contentsline {paragraph}{\large Grupos Abelianos Finitos}{9}{section*.3}%
+\contentsline {paragraph}{\large Grupos Diédricos}{11}{section*.4}%
+\contentsline {paragraph}{\large Grupos de Permutaciones y sus subgrupos}{13}{section*.6}%
+\contentsline {paragraph}{Subgrupos abelianos de $\ensuremath {\mathcal {S}}_n$:}{16}{section*.7}%
+\contentsline {subsection}{\numberline {1.1.3}Acciones de Grupos}{16}{subsection.1.1.3}%
+\contentsline {subsection}{\numberline {1.1.4}Teoremas de Sylow}{17}{subsection.1.1.4}%
+\contentsline {section}{\numberline {1.2}Teoría de Anillos Elemental}{17}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Ideales, Homomorfismos y Teoremas de Isomorfía}{17}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Ejemplos}{17}{subsection.1.2.2}%
+\contentsline {chapter}{\numberline {2}Introducción: Extensiones de Cuerpos}{18}{chapter.2}%
+\contentsline {chapter}{Bibliografía}{19}{chapter*.9}%

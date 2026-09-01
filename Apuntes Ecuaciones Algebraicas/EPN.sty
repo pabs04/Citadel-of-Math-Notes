@@ -30,7 +30,7 @@
 \usepackage{nccmath}
 \usepackage[shortlabels]{enumitem}
 \usepackage[acronym,toc]{glossaries}
-\captionsetup[table]{position=top}
+\captionsetup[table]{position=top,name=Tabla}
 %\usepackage{filecontents}
 \tcbuselibrary{skins,breakable}
 \usetikzlibrary{shadings,shadows,arrows.meta}
@@ -38,6 +38,7 @@
 \newtheorem{cont}{\hspace{-1em}}[chapter]
 \theoremstyle{definition}
 \newtheorem{defi}[cont]{Definición}
+\newtheorem{defiypropos}[cont]{Definiciones y resultados}
 \newtheorem{defis}[cont]{Definiciones}
 \newtheorem{propi}[cont]{Propiedades}
 \newtheorem{obs}[cont]{Observaciones}
@@ -105,7 +106,7 @@
 \newcommand{\clac}{\ensuremath{\textsc{CL}}}
 \newcommand{\mgrac}{\ensuremath{\text{\upshape{multigr}}}}
 \newcommand{\mgr}[1][f]{\ensuremath{\text{\upshape{multigr}}(#1)}}
-\newcommand{\sop}[1][f]{\ensuremath{\text{\upshape{sop}}(#1)}}
+\newcommand{\sop}[1][\sigma]{\ensuremath{\mathbf{sop}(#1)}}
 \newcommand{\cl}[1][f]{\ensuremath{\textsc{CL}(#1)}}
 \newcommand{\gr}[1][f]{\ensuremath{\text{\upshape{gr}}(#1)}}
 \newcommand{\grx}[2]{\ensuremath{\text{\upshape{gr}}_{#2}(#1)}}
@@ -196,6 +197,11 @@
 \newcommand{\De}{\ensuremath{\Longrightarrow}}
 \newcommand{\iz}{\ensuremath{\Leftarrow}}
 \newcommand{\Aut}{\ensuremath{\text{Aut}}}
+\newcommand{\Biy}{\ensuremath{\text{Biy}}}
+\newcommand{\Stab}[2]{\mathbf{Stab}_{#1}(#2)}
+\newcommand{\Sim}{\ensuremath{\mathcal{S}}}
+\newcommand{\Alt}{\ensuremath{\mathcal{A}}}
+\newcommand{\Fro}{\ensuremath{\mathcal{F}}}
 \newcommand{\Iz}{\ensuremath{\Longleftarrow}}
 \newcommand{\deiz}{\ensuremath{\Leftrightarrow
 }}

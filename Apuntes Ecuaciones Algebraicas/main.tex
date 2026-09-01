@@ -9,7 +9,7 @@
 
 %%% Configuración del papel.
 % fourier: Usa la fuente Adobe Utopia. (Comentando la línea usa la fuente normal)
-\documentclass[paper=a4, fontsize=11pt, spanish]{report} 
+\documentclass[paper=a4, fontsize=11pt, spanish,twoside]{report} 
 \usepackage{EPN}
 
 % Centra y formatea los títulos de sección.
@@ -17,16 +17,33 @@
  % Make all sections centered, the default font and small caps
 \setlength\parindent{0pt} % Removes all indentation from paragraphs - comment this line for an assignment with lots of text
 
-% Permite elegir cabeceras y pies de página.
-\usepackage{fancyhdr} % Custom headers and footers
-\pagestyle{fancyplain} % Makes all pages in the document conform to the custom headers and footers
-\fancyhead{} % No page header - if you want one, create it in the same way as the footers below
-\fancyfoot[L]{} % Empty left footer
-\fancyfoot[C]{} % Empty center footer
-\fancyfoot[R]{\thepage} % Page numbering for right footer
-\renewcommand{\headrulewidth}{0pt} % Remove header underlines
-\renewcommand{\footrulewidth}{0pt} % Remove footer underlines
-\setlength{\headheight}{13.6pt} % Customize the height of the header
+\usepackage{fancyhdr}
+
+% -----------------------------
+% Configuración de encabezados
+% -----------------------------
+\pagestyle{fancy}
+
+% Limpiamos header y footer
+\fancyhf{}
+
+% PÁGINAS IMPARES → CAPÍTULO
+\fancyhead[RO]{\nouppercase{\leftmark}}
+
+% PÁGINAS PARES → SECCIÓN
+\fancyhead[RE]{\nouppercase{\rightmark}}
+
+% Número de página en el exterior
+\fancyfoot[R]{\thepage}
+
+% Línea debajo del header
+\renewcommand{\headrulewidth}{0.4pt}
+
+% Sin línea en el footer
+\renewcommand{\footrulewidth}{0pt}
+
+% Altura del header
+\setlength{\headheight}{14pt}
 
 
 %%% Castellano.
@@ -103,7 +120,7 @@ style=numeric
 
 \vspace*{2cm}
 
-{\Huge\bfseries Ecuaciones Algebraicas\par}
+{\Huge\bfseries $\mathfrak{Ecuaciones~Algebraicas}$\par}
 
 \vspace{1cm}
 
@@ -165,18 +182,41 @@ style=numeric
 \newpage
 \spacing{1.2}
 \newpage
-\vfill
+\thispagestyle{empty}
+\vspace*{\fill}
 \begin{center}
 	\begin{minipage}{16cm}
+		
+		{\Large \textbf{Resumen.}}\\
+		
+		\vspace{2mm}
+		
 		Estos apuntes son una recopilación del temario en
 		la asignatura de Ecuaciones Algebraicas, que se imparte en
 		el tercer curso del Grado en Matemáticas de la Universidad Complutense de Madrid. En la bibliografía se pueden obtener todas las fuentes usadas para dicha elaboración. Estos apuntes están pensados para ser una guía definitiva y clara de los objetivos de la asignatura, al igual que varias idas de olla por parte del autor, como los últimos capítulos, totalmente voluntarios y fuera del contenido real de la asignatura.
+		
+		\vspace{3mm}
+		
+		{\large \textbf{Requisitos.}}\\
+		
+		\vspace{2mm}
+		
+		Para esta asignatura, es importante completar, o haber cursado varias veces y tener un control de la asignatura Estructuras Algebraicas. No obstante, todos los resultados previos, definiciones y teoremas importantes se recopilan en el Capítulo \ref{cap:1}. El resumen \textbf{no} es pequeño, pero no es necesario leerlo al completo. Siempre podrás empezar en el Capítulo \ref{cap:2} y volver a la introducción si alguna definición se te atasca.
+		
+		\vspace{3mm}
+		
+		{\large \textbf{Recomendaciones.}}\\
+		
+		\vspace{2mm}
+		
+		Recomiendo encarecidamente echar un vistazo al primer capítulo, sobretodo a la parte de los ejemplos de grupos, para refrescarlos, a los Teoremas de Sylow, utilizados para hallar subextensiones de cuerpos, y por último, la parte de \textit{Teoría de Anillos}, definiciones de cuerpos e ideales, criterios de irreducibilidad de polinomios y anillos finitos, particularmente para el estudio de \textit{Cuerpos Finitos} en el Capítulo \textcolor{red}{INSERTAR REF CAPITULO DE CUERPOS FINITOS}.
+		
 	\end{minipage}
 \end{center}
-\vfill
+\vspace*{\fill}
 
 
-\chapter{Preliminares: Definiciones y Resultados}
+\chapter{Preliminares: Definiciones y Resultados}\label{cap:1}
 
 Para este curso, es imprescindible conocer la teoría básica explicada en la asignatura de Estructuras Algebraicas, conociendo en profundidad la teoría de grupos y de anillos. En este capítulo, repasaremos ambas teorías proporcionando los resultados más importantes, que ayudarán al completo desarrollo del curso. Para más desarrollo de este capítulo, nos referimos a \cite{Gamboagrupos} y \cite{Gamboaanillos}.
 
@@ -257,7 +297,7 @@ Las nociones de subgrupos normales y grupos cociente serán necesarias a la hora
 	\end{enumerate}
 \end{obydefi}
 
-\begin{propo}
+\begin{propo}\label{propo:1.13}
 	Sean $H,K$ dos subgrupos de un grupo $G$, entonces:\begin{itemize}
 		\item[(1)] Dados $K_1,K_2$ subgrupos de $G$ con $K_1\normal K_2$, entonces $K_1\cap H\normal K_2\cap H$.
 		\item[(2)] Si $H$ o $K$ es normal en $G$, entonces $HK$ es subgrupo de $G$. Si ambos son normales, entonces $HK\normal G$.
@@ -414,7 +454,7 @@ Para el siguiente teorema, no proporcionaremos su demostración dado a la irrele
 El siguiente caso de estudio particular es el de los grupos diédricos o diedrales, denotados por $\D_n$. Estos, aunque no sean de gran relevancia en la asignatura de Estructuras Algebraicas, juegan un papel importante a la hora de establecer una conexión geométrica entre las raíces de un polinomio, y como actuan los automorfismos que dejan fijo dichas raíces en una extensión de cuerpos.
 \begin{defi}
 \label{defi:1.29}
-	Sea $V$ un $K$ espacio vectorial de dimensión $n$ con $K=\R$ o $\C$. El grupo $(\Aut(V),\circ)$ está formado por automorfismos $f:V\rightarrow V$ con la operación de composición. Entonces, el grupo diédrico se define como el subgrupo de automorfismos \textbf{ortogonales}\footnote{Formalmente, dado un producto escalar $\langle\cdot,\cdot\rangle:V\times V\rightarrow V$, el conjunto $\text{Ort}_n(\R)$ de automorfismos ortogonales, i.e. que cumplen $\langle f(u),f(v)\rangle=\langle u,v\rangle$ forma un subgrupo de $\Aut(V)$} de orden $2n$ ($n$ simetrías rotacionales, $n$ de reflexión) que deja invariante al conjunto de las \textbf{raíces $n$-ésimas de la unidad} $$\U_n:=\{\zeta\in\C~|~\zeta^n=1\} \subset \R^2=\C$$Es decir, $\D_n:=\{f\in\Aut(\C)~|~f~\text{es ortogonal},~f(\U_n)=\U_n\}$. Además, dado el automorfismo $\rho:\C\longrightarrow\C$ dado por $z\mapsto ze^{\frac{2\pi i}{n}}$ (giro de $2\pi/n$) y el automorfismo $\tau:z\longrightarrow \overline{z}$ (reflexión, conocido como \textbf{conjugación}) generan el grupo diédrico.
+	Sea $V$ un $K$ espacio vectorial de dimensión $n$ con $K=\R$ o $\C$. El grupo $(\Aut(V),\circ)$ está formado por automorfismos $f:V\rightarrow V$ con la operación de composición \footnote{\textbf{Nota:} Varios autores suelen identificar la operación de composición como $f\cdot g=g\circ f$ pues actúa primero $f$. Aquí, hemos decidido no liarnos más de lo debido y denotar $f\cdot g=f\circ g$, pero requerirá de tener esto muy presente.}. Entonces, el grupo diédrico se define como el subgrupo de automorfismos \textbf{ortogonales}\footnote{Formalmente, dado un producto escalar $\langle\cdot,\cdot\rangle:V\times V\rightarrow V$, el conjunto $\text{Ort}_n(\R)$ de automorfismos ortogonales, i.e. que cumplen $\langle f(u),f(v)\rangle=\langle u,v\rangle$ forma un subgrupo de $\Aut(V)$} de orden $2n$ ($n$ simetrías rotacionales, $n$ de reflexión) que deja invariante al conjunto de las \textbf{raíces $n$-ésimas de la unidad} $$\U_n:=\{\zeta\in\C~|~\zeta^n=1\} \subset \R^2=\C$$Es decir, $\D_n:=\{f\in\Aut(\C)~|~f~\text{es ortogonal},~f(\U_n)=\U_n\}$. Además, el automorfismo $\rho:\C\longrightarrow\C$ dado por $z\mapsto ze^{\frac{2\pi i}{n}}$ (giro de $2\pi/n$) y el automorfismo $\tau:z\longrightarrow \overline{z}$ (reflexión, conocido como \textbf{conjugación}) generan el grupo diédrico.
 \end{defi}
 \begin{propo}
 	Dados $\rho,\tau\in\Aut(\C)$ descritos en \ref{defi:1.29}, $\D_n$ es grupo y cumple que $\D_n=\langle\rho,\tau\rangle$. Además, se tiene que $\tau\circ\rho\circ\tau = \rho^{-1}$.
@@ -444,7 +484,7 @@ Al trabajar con \textit{grupos de Galois} (Capítulo \textcolor{red}{INSERTAR CA
 	Usando la proposición anterior sobre la estructura de $\D_n$, construimos un isomorfismo desde una aplicación $\D_n\rightarrow G$ que manda $\rho,\tau$ a $a,b$ respectivamente. Luego el orden de $ba$ es el orden de $\tau\rho$ que es $2$. Además, $baba=1_G$, luego $ab=ba^{n-1}$ y tenemos que $G\subset \{1_G,a,a^2,\dots,a^{n-1},b,ab,\dots,a^{n-1}b\}$, luego $|G|=|\D_n|= 2n$ y $G$ es isomorfo a $\D_n$.
 \end{proof}
 
-\begin{obs}
+\begin{obs}[Subgrupos y subgrupos normales de $\D_n$]
 	Estudiemos ahora los subgrupos y subgrupos normales de $\D_n$, necesarios para lo subsiguientes estudios. Llamamos $H_a = \langle \rho^a \rangle$ para cada $a\in\{1,\dots,n-1\}$. Por la Observación \ref{obydefi:1.12} (4), todos los subgrupos $H_a$ de orden $n$ tienen índice $[\D_n:H_a]=2$, luego son normales. Podemos probar, además, que todo subgrupo de esta forma es normal. Dados $\rho^d\tau^b\in\D_n$ y $\rho^{ac}\in H_a$, entonces sabiendo que $\tau^b=\tau^{-b}$ $$\rho^d\tau^b \rho^{ac}\tau^{-b}\rho^{-d} = \tau^b(\tau^b\rho^d\tau^b)\rho^{ac}(\tau^{-b}\rho^{-d}\tau^{-b})\tau^{-b} = \tau^b\rho^{\pm d}\rho^{ac}\rho^{\mp d}\tau^{-b} = (\rho^{ac})^{-1}=(\rho^{a})^{-c}\in H_a$$Además, para cada divisor $m$ de $n$, existe un único subgrupo de orden $m$, $H_{n/m}$ y es isomorfo a $\Z/m\Z$, en virtud del Teorema \ref{teo:1.26}, pues es abeliano.
 	
 	\vspace{1mm}
@@ -452,10 +492,10 @@ Al trabajar con \textit{grupos de Galois} (Capítulo \textcolor{red}{INSERTAR CA
 	Sin embargo, el subgrupo $\langle \tau\rho\rangle$ de orden $2$, no es normal. Basta con ver que $\rho\tau\rho\rho^{-1} = \rho\tau=\tau\rho^{n-1}\not\in \langle \tau\rho\rangle$. Definimos ahora los subgrupos $L_a = \langle \rho^a,\tau\rangle$. Estos subgrupos son importantes y reflejan una característica de los grupo diédricos: se cumple que $L_a\simeq \D_{k}$ siendo $k = \frac{n}{\mcd[a][n]}$. Luego $L_a$ es siempre un grupo diédrico de orden $2k$ y será normal si podemos afirmar que $\rho \tau \rho^{-1} = \rho^2\tau \in L_a$.\begin{itemize}
 		\item Si $n$ es impar, $L_a$ nunca es normal, salvo que $L_a\simeq \D_n$.
 		\item Si $n$ es par, entonces $L_2=\langle \rho^2,\tau\rangle$ es siempre normal.
-	\end{itemize}Vamos a contar los subgrupos isomorfos a algún $\D_k$. Dado $m$ divisor de $n$, hay exactamente $n/m$ subgrupos de $\D_n$ isomorfos a $\D_m$. Sea $L_{a,b}=\langle \rho^a,\rho^b\tau\rangle$ con $a=n/m$, podemos calcular cuántos de ellos son distintos variando $b\in\{0,\dots,n-1\}$. Sea $\rho^c\tau\in L_{a,c}$ y comprobemos cuándo pertenece a $L_{a,b}$:$$\rho^c\tau\in L_{a,b} \deiz \rho^c\tau=\rho^{ak}\rho^b\tau = \rho^{ak+b}\tau$$Es decir, si $c\equiv \modu{b}{a}$, luego hay exactamente $a=n/m$ elecciones y $\{L_{a,b}\}_{b=1}^{n/m}$, es una familia de subgrupos conjugados\footnote{Dado $G$ grupo, una familia de subgrupos $\{H_i\}_{i=1}^m$ se dice que es de subgrupos conjugados si para cada par $H_i\neq H_j$, existe un elemento $g\in G$ tal que $H_i = gH_jg^{-1}$.}. Por último, veamos que los subgrupos $L_{2,0}$ y $L_{2,1}$ son los únicos subgrupos normales no triviales isomorfos a $\D_{n/2}$. Dado $\rho^{ak}$ y un elemento cualquiera en $\D_n$, al conjugar obtenemos una potencia de $\rho^{a}$, luego sólo es necesario comprobar la conjugación para un elemento $\rho^b\tau$ en $L_{a,b}$. Sea $\rho\tau$, entonces:$$(\rho\tau)\rho^b\tau(\rho\tau)^{-1} = \rho (\tau\rho^b\tau)\tau\rho = \rho \rho^{-b} \tau \rho (\tau\tau) = \rho^{2+b}\tau\in L_{a,b}\deiz 2+b \equiv \modu{ak +b}{n}$$Luego $2\equiv \modu{ak}{n}$, que tiene soluciones para $k$ cuando $\mcd[a][n] \mid 2$.
+	\end{itemize}Vamos a contar los subgrupos isomorfos a algún $\D_k$. Dado $m$ divisor de $n$, hay exactamente $n/m$ subgrupos de $\D_n$ isomorfos a $\D_m$. Sea $L_{a,b}=\langle \rho^a,\rho^b\tau\rangle$ con $a=n/m$, podemos calcular cuántos de ellos son distintos variando $b\in\{0,\dots,n-1\}$. Sea $\rho^c\tau\in L_{a,c}$ y comprobemos cuándo pertenece a $L_{a,b}$:$$\rho^c\tau\in L_{a,b} \deiz \rho^c\tau=\rho^{ak}\rho^b\tau = \rho^{ak+b}\tau$$Es decir, si $c\equiv \modu{b}{a}$, luego hay exactamente $a=n/m$ elecciones y $\{L_{a,b}\}_{b=1}^{n/m}$, es una familia de subgrupos conjugados\footnote{Dado $G$ grupo, una familia de subgrupos $\{H_i\}_{i=1}^m$ se dice que es de subgrupos conjugados si para cada par $H_i\neq H_j$, existe un elemento $g\in G$ tal que $H_i = gH_jg^{-1}$. Se dice que todos esos grupos comparten la misma \textbf{clase de conjugación}, $\mathcal{C}(H_i)$.}. Por último, veamos que los subgrupos $L_{2,0}$ y $L_{2,1}$ son los únicos subgrupos normales no triviales isomorfos a $\D_{n/2}$. Dado $\rho^{ak}$ y un elemento cualquiera en $\D_n$, al conjugar obtenemos una potencia de $\rho^{a}$, luego sólo es necesario comprobar la conjugación para un elemento $\rho^b\tau$ en $L_{a,b}$. Sea $\rho\tau$, entonces:$$(\rho\tau)\rho^b\tau(\rho\tau)^{-1} = \rho (\tau\rho^b\tau)\tau\rho = \rho \rho^{-b} \tau \rho (\tau\tau) = \rho^{2+b}\tau\in L_{a,b}\deiz 2+b \equiv \modu{ak +b}{n}$$Luego $2\equiv \modu{ak}{n}$, que tiene soluciones para $k$ cuando $\mcd[a][n] \mid 2$.
 	\begin{itemize}
 		\item Si $\mcd[a][n]=1$, entonces $\rho^a$ genera todas las rotaciones y por tanto $L_{a,b}\simeq \D_n$, i.e. el único subgrupo normal es el trivial.
-		\item Si $\mcd[a][n]= 2$, entonces $n$ es par con carácter obligatorio, luego $a = 2$ necesariamente y nos quedamos con exactamente $2$ subgrupos distintos de $\D_n$ que son normales, en particular, $L_2 = \langle \rho^2,\tau\rangle$ y $L_{2,1}=\langle \rho^2,\rho\tau\rangle$.
+		\item Si $\mcd[a][n]= 2$, entonces $n$ debe ser par, luego $a = 2$ necesariamente y nos quedamos con exactamente $2$ subgrupos distintos de $\D_n$ que son normales, en particular, $L_2 = \langle \rho^2,\tau\rangle$ y $L_{2,1}=\langle \rho^2,\rho\tau\rangle$.
 	\end{itemize}
 \end{obs}
 
@@ -470,18 +510,176 @@ Al trabajar con \textit{grupos de Galois} (Capítulo \textcolor{red}{INSERTAR CA
 		Diédricos especiales  & $\langle \rho^2, \tau \rangle$, $\langle \rho^2, \rho\tau \rangle$ & $\D_{n/2}$ & No & {\large \checkmark} \\
 		Diédricos generales   & $L_{n/m,b}$ & $\D_{m}$ & Solo si $\D_n$ & Solo si $\D_n$ \\ \hline
 	\end{tabular}
-	\caption{Clasificación y normalidad de subgrupos en $D_n$ ($m \mid n$).}
+	\caption{Clasificación y normalidad de subgrupos en $\D_n$ ($m \mid n$).}
+	\label{tabla:1.1}
 \end{table}
 
-\paragraph{\large Grupos de Permutaciones y sus subgrupos}
+\paragraph{\large Grupos de Permutaciones y sus subgrupos}~\\
 
+Como veremos, al estudiar con raíces de polinomios y diferentes automorfismos sobre extensiones de cuerpos (todo esto cobrará sentido más adelante), la estructura de grupo es muy importante. En especial, ahora introduciremos los \textbf{grupos de permutaciones} y demostraremos el conocido \textit{Teorema de Caley}.
+
+\begin{defi}
+	Sea $n\leq 1$ un entero y $I_n:=\{1,\dots,n\}$. Definimos el \textbf{grupo de permutaciones} o \textbf{grupo simétrico} como el conjunto $$\Sim_n:=\Biy(I_n)=\{\sigma:I_n\rightarrow I_n~|~\sigma~\text{es biyectiva}\}$$El cardinal de $\Sim_n$ es $n!$ y, junto a la composición de funciones, $(\Sim_n,\circ)$ es un grupo.
+\end{defi}
+
+\begin{propi}\label{propi:1.34}
+	Tenemos las siguientes propiedades inmediatas del grupo simétrico:\begin{enumerate}
+		\item[i)] Para cada $m\geq n\geq 2$, el grupo $\Sim_n$ es también subgrupo de $\Sim_m$ de manera natural, tomando las biyecciones en $\Sim_m$ que fijan siempre $I_m\setminus I_n$.
+		\item[ii)] El conjunto $I_n$ es irrelevante pues, para cualquier conjunto $C$ de $n$ elementos y una biyección cualquiera $f:I_n\rightarrow C$, la aplicación $\Phi:\Biy(C)\rightarrow \Sim_n$ dada por $\sigma\mapsto f^{-1}\circ \sigma \circ f$ es un isomorfismo. Un ejemplo práctico es, por ejemplo, tomar $\U_n$, de esa manera la aplicación $\D_n\rightarrow \Biy(\U_n)=\Sim_n,~f\mapsto f|_{\U_n}$ es un homomorfismo inyectivo, luego $\D_n$ es un subgrupo propio de $\Sim_n$ salvo para $n=3$, pues $|\D_3|=|\Sim_3|=6$ y en ese caso, $\D_3\simeq \Sim_3$.
+		\item[iii)] Para $n\geq 3$, $Z(\Sim_n)=\{\textbf{id}\}$, es decir, es trivial. Tomando $\sigma\in\Sim_n\setminus\{\textbf{id}\}$, entonces existen $i\neq j$ tales que $\sigma(i)=j$, luego la permutación $\tau$ tal que $\tau(j)=k$, $\tau(k)=j$ con $k\not\in\{i,j\}$ y $\tau(m)=m$ para cada $m\in I_n\setminus\{k,j\}$ no conmuta con $\sigma$, es decir, $\sigma\tau\neq \tau\sigma\De \sigma\not\in\Sim_n$:$$(\tau\sigma)(i)=\tau(\sigma(i))=\tau(j)=k\neq j=\sigma(i)=(\sigma\tau)(i)$$
+	\end{enumerate}
+\end{propi} 
+
+\begin{teo}[\textbf{Teorema de Caley}]
+	Todo grupo $G$ es isomorfo a un subgrupo del grupo $\Biy(G)$. En particular todo grupo finito es isomorfo a un subgrupo de un grupo de permutaciones.
+\end{teo}
+\begin{proof}
+	Denotamos $\overline g:G\longrightarrow G$, $h\mapsto hg$ para cada $g\in G$, que es naturalmente biyectiva: si $h_1g=h_2g$, entonces $h_1=h_2$ y además para cada $h\in G$ existe $hg^{-1}$ tal que $\overline g(hg^{-1})= h$. Consideramos la aplicación $$\Theta:G\longrightarrow \Biy(G),~g\mapsto\overline g$$\begin{itemize}
+		\item \textbf{Homomorfismo:} dados $g,g'\in G$ y $x\in G$:$$\Theta(gg')(x) = \overline{gg'}(x) = xgg' = (xg)g' = \overline{g'}(\overline{g}(x))=(\Theta(g')\circ\Theta(g))(x)$$
+	\item \textbf{Inyectiva:} Sea $g\in\ker \Theta$, entonces $\overline g=\textbf{id}_G:G\rightarrow G,~x\mapsto x$, es decir, $xg=x$, luego $g=1_G$. 
+	\end{itemize}Esto prueba que $G/\ker \Theta = G\simeq \Theta(G)\subseteq \Biy(G)$ como subgrupo. Además, si $G$ es finito, entonces existe $n\in\N$ tal que $|G|=n$, luego $G\leq \Biy(G)\simeq \Biy(I_n)=\Sim_n$ en virtud de \ref{propi:1.34} (ii).
+\end{proof}
+Debemos recordar las siguientes definiciones importantes sobre el grupo de permutaciones.
+
+\begin{defiypropos}
+	Sea $n\geq 2$ un entero y $\Sim_n$ el grupo simétrico. Entonces, definimos:\begin{enumerate}
+		\item[1)] Dada $\sigma\in\Sim_n$, el \textbf{soporte} de $\sigma$ como permutación es el conjunto $\sop=\{i\in I_n~|~\sigma(i)\neq i\}$.
+		\item[2)] Una permutación se dice \textbf{ciclo de longitud} $k$ o $k$-ciclo si existe $\{i_1,\dots,i_k\}\subseteq I_n$ tal que $\sop = \{i_1,\dots,i_k\}$ y $\sigma(i_1)=i_2,\sigma(i_2)=i_3,\dots,\sigma(i_{k-1})=i_k,\sigma(i_k)=i_1$. Todos los $k$-ciclos tienen orden $k$, y los de longitud $2$ se les conoce por el nombre de \textbf{transposiciones}. Los ciclos se escriben de manera reducida como $(i_1,\dots,i_k)$.
+		\item[3)] Dada $\sigma\in\Sim_n$, definimos $f_\sigma:\R^n\rightarrow\R^n,~e_j\mapsto e_{\sigma(j)}$ que consiste en permutar los vectores de la base estándar acorde a $\sigma$. El determinante de $f_\sigma$ es o bien $+1$ o $-1$ por propiedades ya conocidas. Esto nos da un homomorfismo de grupos 
+		\begin{equation}\label{eq:1.1}
+			\begin{array}{cccccc}
+				\varepsilon: & \Sim_n & \longrightarrow & \Aut(\R^n) & \longrightarrow & \U_2=\{+1,-1\}\\
+				& \sigma & \longmapsto & f_\sigma & \longmapsto & \mathbf{det}(f_\sigma)
+			\end{array}
+		\end{equation}llamado \textbf{índice}, que nos muestra la paridad de una permutación. Una transposición tiene índice $-1$. Al núcleo de $\varepsilon$ se lo conoce como \textbf{grupo alternado} $\Alt_n$, que posee exactamente $n!/2$ elementos. Las permutaciones en $\Alt_n$ se las conoce como \textbf{pares}, las que no, como \textbf{impares.}
+		\item[4)] Diremos que dos permutaciones son \textbf{disjuntas} si el soporte de cada una es disjunto. No lo demostraremos aquí, pero es indispensable conocer que, toda permutación $\sigma\in\Sim_n$ se descompone de manera única, salvo el orden, en producto (composición) de ciclos disjuntos. Además, si $\sigma=\sigma_k\cdots\sigma_1$ es una descomposición, el orden de $\sigma$ es el mínimo común múltiplo de las longitudes de los ciclos.
+	\end{enumerate}
+\end{defiypropos}
+
+\begin{teo}[Sistemas generadores de $\Sim_n$ y $\Alt_n$]\label{teo:1.37}
+	Los siguientes conjuntos son sistemas de generadores para:\begin{itemize}
+		\item[i)] $\{(1,i)~|~2\leq i\leq n\}$ genera $\Sim_n$.
+		\item[ii)] La transposición $(1,2)$ y el $n$-ciclo $(1,\dots,n)$ generan $\Sim_n$.
+		\item[iii)] $\{(1,2,i)~|~3\leq i\leq n\}$ generan $\Alt_n$.
+		\end{itemize}
+\end{teo}
+\begin{proof}
+	Solo realizaremos la prueba para (ii). Para ello, nos referimos a \cite{Gamboagrupos} y damos por sentado (i). Sea $\tau_k = (k,k+1)$ y veamos que puede ser escrita como una palabra en $\tau=(1,2)$ y $\sigma=(1,\dots,n)$. Para $k=1$, $\tau_1=\tau$. Para $k=2$, tenemos que $\tau_2 = \sigma\tau\sigma^{-1}$. En efecto, pues dado $i\neq 2,3$, $\sigma(\tau(\sigma^{-1}(i))) = \sigma(\tau(i-1))\sigma(i-1)=i$ y:\begin{itemize}
+		\item $\sigma(\tau(\sigma^{-1}(2))) = \sigma(\tau(1))=\sigma(2)=3$.
+		\item $\sigma(\tau(\sigma^{-1}(3))) = \sigma(\tau(2)) = \sigma(1)=2$.
+	\end{itemize}Supongamos que es cierto para $k$, entonces es claro que $\sigma\tau_k\sigma^{-1}$ deja fijo todo $j\not\in\{k+1,k+2\}$ y permuta $k+1,k+2$. Luego $\tau_{k+1}$ es precisamente esa palabra.
+\end{proof}
+
+\begin{ob}
+	Para $n\geq 4$, el grupo alternado $\Alt_n$ no es abeliano. Basta con tomar el ciclo $(1,2,3)$ y la permutación $(3,4)(1,2)$. La imagen del $1$ por el ciclo es $2$ y por la permutación vuelve a ser $1$. La imagen del $1$ en la permutación es $2$ y por la permutación es $3$. Además, un ciclo pertenece a $\Alt_n$ si y solo si su longitud es impar.
+\end{ob}
+
+\begin{obs}[Subgrupos y subgrupos normales de $\Sim_n$ y $\Alt_n$]
+	Ahora, veremos de nuevo una parte importante de los grupos de permutaciones. Primero, uno puede observar que, como $[\Sim_n:\Alt_n]=2$, entonces el grupo alternado $\Alt_n$ es siempre subgrupo normal de $\Sim_n$. El próximo teorema nos dice que para $n\geq 5$, el grupo $\Alt_n$ no posee subgrupos normales, i.e. es simple.
+	
+	\begin{teo}[\textbf{Teorema de Abel}]
+		Sea $n\geq 5$, entonces $\Alt_n$ es un grupo simple
+	\end{teo}
+	\begin{proof}
+		Este resultado es muy importante, pero no requerimos la prueba. La demostración se puede encontrar de forma muy detallada y simple en \cite{Gamboagrupos}.
+	\end{proof}
+	Por otro lado, si podemos saber que $\Alt_n$ es el único subgrupo normal de $\Sim_n$ para $n\geq 5$. Para demostrarlo, tomamos un subgrupo $H\normal \Sim_n$, y como vimos en la Proposición \ref{propo:1.13} (1), $H\cap \Alt_n\normal \Alt_n$. Por el Teorema de Abel, $H\cap \Alt_n$ es o bien $\Alt_n$ o $\{\textbf{id}\}$. Si $H\cap \Alt_n = \Alt_n$ entonces $\Alt_n\subset H\subsetneq \Sim_n$ y por la transitividad de los índices, necesariamente $[H:\Alt_n]=1$ y por tanto $H=\Alt_n$. En cambio, si $H\cap\Alt_n = \{\textbf{id}\}$, $H$ sería un subgrupo de orden $2$ en $\Sim_n$, luego $H$ está contenido en el centro de $\Sim_n$, que por \ref{propi:1.34} (iii), esto es absurdo.
+	
+	\vspace{2mm}
+	
+	Para $n=2$, el grupo simétrico en dos letras no es más que el grupo abeliano $\Z/2\Z$. Como ya hemos visto en el Teorema \ref{teo:1.37}, la transposición $(1,2)$ y el $2$-ciclo $(1,2)$ coinciden, se cumple $(1,2)^{-1}=(1,2)$ y además conmutan, luego $\Sim_2 \simeq \Z/2\Z$.
+	
+	\vspace{2mm}
+	
+	Para $n=3$, ya vimos que $\Sim_3 \simeq \D_3$ y los subgrupos del grupo diédrico de orden $6$ ya han sido explorados en la Tabla \ref{tabla:1.1}.
+	
+	\vspace{2mm}
+	
+	Para $n=4$, el grupo alternado sí posee un subgrupo normal, llamado \textbf{grupo de Klein} $$V:=\{\textbf{id},\textcolor{magenta}{(1,2)(3,4)},\textcolor{blue}{(1,3)(2,4)},\textcolor{orange}{(1,4)(2,3)}\}$$ El grupo de Klein tiene orden $4$, está naturalmente contenido en $\Alt_4$ pues todos los elementos, salvo la identidad, son producto de dos transposiciones, luego $\varepsilon(\tau\tau') = \varepsilon(\tau)\varepsilon(\tau')=(-1)^2=1$. Veamos ahora que es subgrupo normal. Sea $\tau\in\Sim_4$ una transposición cualquiera (en virtud del Teorema \ref{teo:1.37}, sabemos que las transposiciones forman un sistema generador de $\Sim_4$) y verifiquemos que $\tau^{-1}V\tau = V$. Basta probarla para una de las transposiciones, pues en $V$ aparecen todas. Sea $\tau=(1,2)$ con $\tau^{-1}=(1,2)$, entonces
+	\begin{equation*}
+		\begin{array}{rl}
+			\tau^{-1}V\tau & =  \{\textbf{id},(1,2)\textcolor{magenta}{(1,2)(3,4)}(1,2),(1,2)\textcolor{blue}{(1,3)(2,4)}(1,2),(1,2)\textcolor{orange}{(1,4)(2,3)}(1,2)\}\\
+			& = \{\textbf{id},(3,4)(1,2),(1,3,2)(2,1,4),(1,4,2)(2,1,3)\}\\
+			& = \{\textbf{id},\textcolor{magenta}{(1,2)(3,4)},\textcolor{orange}{(1,4)(2,3)},\textcolor{blue}{(1,2)(3,4)}\} = V
+		\end{array}
+	\end{equation*}
+\end{obs}
+
+\paragraph{Subgrupos abelianos de $\Sim_n$:} Sea $n$ un numéro entero y $\{r_1,\dots,r_l\}$ una partición cualquiera de $n$, es decir, $r_1\leq\cdots\leq r_l$ y $n=r_1+\cdots+r_l$. Entonces, existen permutaciones disjuntas $\sigma_1,\dots,\sigma_l$ de longitudes $r_1,\dots,r_l$ respectivamente, luego el grupo $\Sim_n$ contiene un subgrupo abeliano isomorfo a $G:=(\Z/r_1\Z)\times\cdots\times (\Z/r_l\Z)$. En particular, $\langle\sigma_1,\dots,\sigma_l\rangle\simeq G$. Es importante recalcar que, hay subgrupos abelianos que se obtienen de admitir permutaciones no disjuntas, pero que si conmutan, como es el ejemplo del grupo de Klein.
+
+\begin{ob}[\textit{Duda personal}]
+	A muchos de vosotros a lo mejor no os pasará nunca, pero a mí me pasó. No intentéis clasificar todos los grupos en casillas, esto no quiere decir que conocer todo esto no sea relevante. Aquí va un ejemplo: si bien sabemos que, por su estructura, $V\simeq (\Z/2\Z) \times (\Z/2\Z)$, este grupo tiene una particularidad dentro de $\Alt_4$ diferente a $\langle (1,2),(3,4)\rangle$ que es también isomorfo a $V$, pero \textit{NO SON IGUALES}. $V$ es normal en $\Alt_4$, pero, $\langle(1,2),(3,4)\rangle$ ni siquiera es subgrupo de $\Alt_4$. Además, $V$ posee otra propiedad importante: es un grupo transitivo de $\Sim_4$.
+\end{ob}
+
+\begin{defi}\label{defi:1.40}
+	Un subgrupo $G\leq \Sim_n$ se dice transitivo si para cada par $i,j\in I_n$ distintos existe una permutación $\sigma\in G$ tal que $\sigma(i)=j$
+\end{defi}
+
+\begin{propo}\label{propo:1.41}
+	Si $p$ es un número primo y $G$ es un subgrupo transitivo de $\Sim_p$ que contiene una transposición, entonces $G=\Sim_p$. Además, $V$ es el único subgrupo transitivo de $\Sim_4$.
+\end{propo}
+
+\subsection{Acciones de Grupos}
+
+Este tema impartido en Estructuras Algebraicas es muy importante, pues permite demostrar uno de los teoremas más importantes en la \textit{Teoría de Grupos}, el llamado, \textbf{Teorema de Cauchy}. Debemos recordar varios conceptos como el de acciones, órbitas y estabilizadores; pero no vamos a requerir de ningún teorema a lo largo del desarrollo de la asignatura Ecuaciones Algebraicas.
+
+\begin{defi}
+	Sea $G$ grupo y $X$ un conjunto no vacío. Decimos que \textbf{$G$ actúa sobre $X$ bajo la acción} $G\longrightarrow \Biy(X),~g\mapsto \tilde{g}$, si esta aplicación es un homomorfismo de grupos. Normalmente, esta acción de grupo se denota mediante \begin{equation*}
+		\begin{array}{ccc}
+			G\times X&\longrightarrow &X\\
+			(g,x) & \longmapsto & \tilde{g}(x)
+		\end{array}
+	\end{equation*}Decimos que la acción es \textbf{fiel} cuando $\tilde{g}(x)=x$ para todo $x\in X$ se cumple si y sólo si $g=1_G$. Decimos que la acción es \textbf{transitiva} si para cada par de elementos $x,y\in X$, existe $g\in G$ tal que $\tilde{g}(x)=y$.
+	
+	\vspace{2mm}
+	
+	Dada una acción $G\times X\rightarrow X$, en $X$, podemos definir una relación de equivalencia $x\sim y:~\exists~g\in G~|~\tilde{g}(x)=y$; que claramente es reflexiva, dado que $x=\tilde{1_G}(x)$, simétrica porque existe $(\tilde{g})^{-1}:=\widetilde{g^{-1}}$, y transitiva. La clase de equivalencia de un elemento $x\in X$ sobre la acción de $G$ se la conoce como $G$-órbita de $x$, o simplemente órbita de $x$ si se entiende por el contexto, y se denota por $O_x:=\{\tilde{g}(x)~|~g\in G\}$. El \textbf{estabilizador} de un punto $x\in X$ bajo la acción de $G$ es el subgrupo de $G$ dado por $\Stab{G}{x}:=\{g\in G~|~\tilde{g}(x)=x\}$.
+\end{defi}
+
+\vspace{2mm}
+
+Ahora, resumiremos las propiedades y los resultados inmediatos de esta nueva herramienta, sin entrar en detalle de las demostraciones.
+
+\begin{propi}\label{propi:1.43}
+	Sea $G$ un grupo y $X$ un conjunto no vacío, donde $G$ actúa sobre $X$.\begin{enumerate}
+		\item[1)] \textbf{Criterio de no simplicidad:} si existe un subgrupo $H\leq G$ cuyo índice cumple $2\leq[G:H\leq 4]$, entonces $G$ no es simple.
+		\item[2)] \textbf{Criterio de normalidad:} supongamos que $G$ es finito y $p$ es el menor divisor primo de $|G|$, entonces todo subgrupo $H\leq G$ con $[G:H]=p$ es subgrupo normal.
+		\item[3)] \textbf{Criterio de abelianidad:} sea $p$ un número primo, $n$ un entero positivo y supongamos que $|G|=p^n$. Entonces $|Z(G)|\neq p^{n-1}$. En particular, si $|G|=p^3$ y $G$ es no abeliano, entonces $|Z(G)|=p$. Todo grupo de orden $p^2$ es abeliano.
+		\item[4)] \textbf{Cardinad de una órbita:} se cumple $|O_x|=[G:\Stab{G}{x}]$.
+		\item[5)] \textbf{Fórmula de las órbitas:} sea $R$ un conjunto de representantes de $X$ bajo la acción de $G$, entonces $$|X| = \sum_{x\in R}[G:\Stab{G}{x}]$$
+	\end{enumerate}
+\end{propi}
+
+\begin{propo}\label{propo:1.44}
+	Supongamos que $G\leq \Sim_n$ es transitivo (descrito en la Definición \ref{defi:1.40}). Entonces, el orden de $G$ es múltiplo de $n$. En particular, si $n$ es primo y $G$ es cíclico, entonces $G=\langle\sigma\rangle$ donde $\sigma$ es un $n$-ciclo.
+\end{propo}
+\begin{proof}
+	El grupo $G$ actúa sobre $X=\{1,\dots,n\}$ de manera natural, pues tenemos la inclusión $j:G\rightarrow \Sim_n=\Biy(X)$. Como $G$ es transitivo, la acción sólo posee una órbita, es decir, $O_x=X$ y por Propiedades \ref{propi:1.43} (3) y la transitividad del índice, $$|G|=[G:\Stab{G}{x}]|\Stab{G}{x}| = |O_x||\Stab{G}{x}|=n|\Stab{x}{G}|$$Por último, sea $G=\langle\sigma\rangle$ y supongamos que $\sigma$ no es $n$-ciclo y descompone de manera única como $\sigma=\sigma_1\cdots\sigma_k$. Por lo anterior, tenemos que $n$ divide al mínimo común múltiplo de las longitudes de los $\sigma_i$ que son menor que $n$, pero $n$ es primo, luego esto es absurdo y concluimos que $\sigma$ es $n$-ciclo.
+\end{proof}
+
+\begin{teo}[\textbf{Teorema de Cauchy}]
+	Sean $p$ un número primo y $G$ un grupo con $p\mid |G|$. Entonces, el número de subgrupos de $G$ de orden $p$ es congruente con $\modu{1}{p}$. En particular, siempre existe un elemento de orden $p$.
+\end{teo}
+
+\vspace{1.5mm}
+
+\textit{Demostración de Proposición 1.41.} Por la Proposición \ref{propo:1.44}, el orden de $G$ es múltiplo de $p$. Por el Teorema de Cauchy, existe un elemento de orden $p$, que necesariamente es un $p$-ciclo, luego $G$ posee una transposición y un $p$-ciclo y, por tanto, $G=\Sim_p$.
+
+\begin{coro}
+	Sea $p$ un número primo impar. Entonces, todo grupo de orden $2p$ es isomorfo o bien al grupo cíclico $\Z/2p\Z$, o al grupo diédrico $\D_{2p}$.
+\end{coro}
+\begin{proof}
+	La demostración se puede encontrar bien detallada y simple en \textbf{Corolario IV.2.2} \cite{Gamboagrupos}.
+\end{proof}
 \subsection{Teoremas de Sylow}
+
+Vamos a terminar la \textit{Teoría de Grupos} necesaria para este curso, con unos de los teoremas más importantes en cuestión al número de subgrupos de un grupo. Estos teoremas toman relevancia a la hora de estudiar la cantidad de subextensiones de cuerpos que existen de una extensión dada. Pronto veremos que significa todo esto.
 \section{Teoría de Anillos Elemental}
 
 \subsection{Ideales, Homomorfismos y Teoremas de Isomorfía}
 \subsection{Ejemplos}
 
-\chapter{Introducción: Extensiones de Cuerpos}
+\chapter{Introducción: Extensiones de Cuerpos}\label{cap:2}
 
 
 \clearpage
