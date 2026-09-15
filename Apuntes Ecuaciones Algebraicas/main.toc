@@ -11,8 +11,8 @@
 \contentsline {paragraph}{Subgrupos abelianos de $\ensuremath {\mathcal {S}}_n$:}{16}{section*.7}%
 \contentsline {subsection}{\numberline {1.1.3}Acciones de Grupos}{16}{subsection.1.1.3}%
 \contentsline {subsection}{\numberline {1.1.4}Teoremas de Sylow}{17}{subsection.1.1.4}%
-\contentsline {section}{\numberline {1.2}Teoría de Anillos Elemental}{18}{section.1.2}%
-\contentsline {subsection}{\numberline {1.2.1}Ideales, Homomorfismos y Teoremas de Isomorfía}{18}{subsection.1.2.1}%
-\contentsline {subsection}{\numberline {1.2.2}Ejemplos}{18}{subsection.1.2.2}%
-\contentsline {chapter}{\numberline {2}Introducción: Extensiones de Cuerpos}{19}{chapter.2}%
-\contentsline {chapter}{Bibliografía}{20}{chapter*.9}%
+\contentsline {section}{\numberline {1.2}Teoría de Anillos Elemental}{19}{section.1.2}%
+\contentsline {subsection}{\numberline {1.2.1}Ideales, Homomorfismos y Teoremas de Isomorfía}{19}{subsection.1.2.1}%
+\contentsline {subsection}{\numberline {1.2.2}Ejemplos}{19}{subsection.1.2.2}%
+\contentsline {chapter}{\numberline {2}Introducción: Extensiones de Cuerpos}{20}{chapter.2}%
+\contentsline {chapter}{Bibliografía}{21}{chapter*.9}%

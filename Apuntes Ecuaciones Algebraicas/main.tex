@@ -23,16 +23,21 @@
 % Configuración de encabezados
 % -----------------------------
 \pagestyle{fancy}
+\usepackage{extramarks}
+\renewcommand{\chaptermark}[1]{\markboth{\thechapter.\ #1}{}}
+\renewcommand{\sectionmark}[1]{\extramarks{\thesection\ #1}{}}
+\renewcommand{\subsectionmark}[1]{\extramarks{\lastleftxmark}{\thesubsection\ #1}}
 
 % Limpiamos header y footer
 \fancyhf{}
 
 % PÁGINAS IMPARES → CAPÍTULO
 \fancyhead[RO]{\nouppercase{\leftmark}}
+\fancyhead[LO]{[\href{https://github.com/pabs04/Citadel-of-Math-Notes.git}{PCS}]}
 
 % PÁGINAS PARES → SECCIÓN
-\fancyhead[RE]{\nouppercase{\rightmark}}
-
+\fancyhead[EL]{\firstrightxmark} % Subsección con número a la izquierda
+\fancyhead[ER]{\lastleftxmark}
 % Número de página en el exterior
 \fancyfoot[R]{\thepage}
 
@@ -272,7 +277,7 @@ Si por contexto se entiende, nos referimos a un grupo por el conjunto $G$ y la o
 
 El siguiente teorema será constantemente utilizado cuando empecemos la \textit{Teoría de Galois}, en el Capítulo \textcolor{red}{INSERTAR CAP}.
 
-\begin{teo}[\textbf{Transitividad del índice}]
+\begin{teo}[\textbf{Transitividad del índice}]\label{teo:1.10}
 	Sean $H$ y $K$ subgrupos de un grupo $G$ tales que $k\subset H$ y $[G:K]$ es finito. Entonces $[G:H]$ y $[H:K]$ so finitos y se cumple que $$[G:K] = [G:H]\cdot [H:K]$$Si $G$ es un grupo finito, i.e. $|G|<\infty$ y $H$ es un subgrupo de $G$, entonces $|G| = |H|\cdot [G:H]$ es la denominada \textbf{fórmula de Lagrange}.
 \end{teo}
 
@@ -657,7 +662,7 @@ Ahora, resumiremos las propiedades y los resultados inmediatos de esta nueva her
 	El grupo $G$ actúa sobre $X=\{1,\dots,n\}$ de manera natural, pues tenemos la inclusión $j:G\rightarrow \Sim_n=\Biy(X)$. Como $G$ es transitivo, la acción sólo posee una órbita, es decir, $O_x=X$ y por Propiedades \ref{propi:1.43} (3) y la transitividad del índice, $$|G|=[G:\Stab{G}{x}]|\Stab{G}{x}| = |O_x||\Stab{G}{x}|=n|\Stab{x}{G}|$$Por último, sea $G=\langle\sigma\rangle$ y supongamos que $\sigma$ no es $n$-ciclo y descompone de manera única como $\sigma=\sigma_1\cdots\sigma_k$. Por lo anterior, tenemos que $n$ divide al mínimo común múltiplo de las longitudes de los $\sigma_i$ que son menor que $n$, pero $n$ es primo, luego esto es absurdo y concluimos que $\sigma$ es $n$-ciclo.
 \end{proof}
 
-\begin{teo}[\textbf{Teorema de Cauchy}]
+\begin{teo}[\textbf{Teorema de Cauchy}]\label{teo:1.45}
 	Sean $p$ un número primo y $G$ un grupo con $p\mid |G|$. Entonces, el número de subgrupos de $G$ de orden $p$ es congruente con $\modu{1}{p}$. En particular, siempre existe un elemento de orden $p$.
 \end{teo}
 
@@ -673,10 +678,10 @@ Ahora, resumiremos las propiedades y los resultados inmediatos de esta nueva her
 \end{proof}
 \subsection{Teoremas de Sylow}
 
-Vamos a terminar la \textit{Teoría de Grupos} necesaria para este curso, con varios de los teoremas más relevantes en relación al número de subgrupos de un grupo. Estos teoremas toman relevancia a la hora de estudiar la cantidad de subextensiones de cuerpos que existen de una extensión dada. Pronto veremos que significa todo esto. De ahora en adelante, fijaremos un primo $p$ y enteros positivos $m,n$ tales que el orden de un grupo $G$ sea $|G|=mp^n$ con $m \nmid p$. Los subgrupos de $G$ de orden $p^m$ para $1\leq m\leq n$ se llaman $p$-subgrupos y, en particular, para $m=n$ se conocen como \textbf{$p$-subgrupos de Sylow}.
+Vamos a terminar la \textit{Teoría de Grupos} necesaria para este curso, con varios de los teoremas más relevantes en relación al número de subgrupos de un grupo. Estos teoremas toman relevancia a la hora de estudiar la cantidad de subextensiones de cuerpos que existen de una extensión dada. Pronto veremos que significa todo esto. De ahora en adelante, fijaremos un primo $p$ y enteros positivos $m,n$ tales que el orden de un grupo $G$ sea $|G|=mp^n$ con $p \nmid m$. Los subgrupos de $G$ de orden $p^m$ para $1\leq m\leq n$ se llaman $p$-subgrupos y, en particular, para $m=n$ se conocen como \textbf{$p$-subgrupos de Sylow}.
 
-\begin{teo}[\textbf{Primer Teorema de Sylow}]
-	Sea $G$ un grupo con $|G|=mp^n$ donde $p$ es primo y $m\nmid p$, sean $H,K$ dos $p$-subgrupos de Sylow. Entonces $H$ y $K$ son subgrupos conjugados. Además, $H$ es normal si y sólo si es el único $p$-subgrupo de Sylow.
+\begin{teo}[\textbf{Primer Teorema de Sylow}]\label{teo:1.47}
+	Sea $G$ un grupo con $|G|=mp^n$ donde $p$ es primo y $p\nmid m$, sean $H,K$ dos $p$-subgrupos de Sylow. Entonces $H$ y $K$ son subgrupos conjugados. Además, $H$ es normal si y sólo si es el único $p$-subgrupo de Sylow.
 \end{teo}
 
 \begin{proof}
@@ -688,14 +693,33 @@ Vamos a terminar la \textit{Teoría de Grupos} necesaria para este curso, con va
 	\end{equation*}El cardinal de $X$ es $|X|=|G|/|K|=m$, entonces la fórmula de las órbitas (Propiedades \ref{propi:1.43} (5)) se queda en $m = \sum_{kg\in R}[H:\Stab{H}{Kg}]$. Como $m$ no divide a $p$, entonces existe algún $Kg_0$ cumpliendo que el índice $[H:\Stab{H}{Kg_0}]=1$, luego $H=\Stab{H}{Kg_0}$ y por tanto $$Kg_0=\tilde{h}(Kg_0)=Kg_0h \De g_0hg_0^{-1}\in K,~~\forall~h\in H$$Luego tenemos que $g_0Hg_0^{-1}\subset K$ y como $|g_0Hg_0^{-1}|=|H|=p^n=|K|$, deducimos que $K = g_0Hg_0^{-1}$ y $H,K$ son conjugados. Por último, bajo otro supuesto y usando lo ya probado, si $H$ es el único $p$-subgrupo de Sylow, entonces sus conjugados coinciden con él mismo, es decir, $gHg^{-1}=H \De gh=Hg$ para todo $g\in G$, luego $H$ es normal. El recíproco es inmediato.
 \end{proof}
 
-\begin{teo}[\textbf{Segundo Teorema de Sylow}]
+\begin{teo}[\textbf{Segundo Teorema de Sylow}]\label{teo:1.48}
 	Sea $G$ un grupo en las condiciones del enunciado anterior. Entonces:\begin{enumerate}
 		\item[i)] Fijado $0\leq k\leq n-1$ y un subgrupo $H_k<G$ de orden $p^k$, existe un subgrupo $H_{k+1}$ de orden $p^{k+1}$ tal que $H_k\normal H_{k+1}$.
 		\item[ii)] Existen subgrupos $H_1,\dots,H_n < G$ de órdenes $p,p^2,\dots,p^n$ respectivamente tales que $H_k\normal H_{k+1}$ para cada $1\leq k\leq n-1$.
 		\item[iii)] Todo $p$-subgrupo de $G$ está contenido en algún $p$-subgrupo de Sylow de $G$.
 	\end{enumerate}
 \end{teo}
+\begin{proof}
+	El apartado $(ii)$ se desprende de $(i)$ empezando con $H_0=\{1_G\}$ de orden $p^0$. Además, por el Teorema de la Correspondencia, por ser $H_k\normal H_{k+1}$, el grupo cociente $H_{k+1}/H_k$ es cíclico de orden primo, luego sus subgrupos son los triviales, y por tanto cualquier $p$-subgrupo de Sylow contenido en $H_{k+1}$ es o bien $H_{k+1}$ o $H_k$, luego $(i)$ también implica $(iii)$. Demostremos ahora $(i)$. Por inducción sobre $k$, para $k=0$ tenemos, por el Teorema \ref{teo:1.45} (\textit{Teorema de Cauchy}) que existe un subgrupo de orden $H_1$ de orden $p$ que tiene a $H_0=\{1_G\}$ como subgrupo normal. Supongamos que se cumple para $0<k\leq n-1$, entonces $[G:H_k]=p^{n-k}m\in p\Z$, luego se deduce que $[N_G(H_k):H_k]\in p\Z$ y aplicando el \textit{Teorema de Cauchy} a $N_G(H_k)/H_k$, existe un subgrupo de orden $p$, que por el Teorema de la Correspondencia, este corresponde a un grupo de la forma $H_{k+1}/H_k$ con $H_k\normal H_{k+1}$ y $|H_{k+1}| = p^{k+1}$.
+\end{proof}
+
+\begin{teo}[\textbf{Tercer Teorema de Sylow}]\label{1.49}
+	Sea $G$ un grupo en las condiciones del enunciado anterior ($|G|=p^nm$) y $n_p$ el número de $p$-subgrupos de Sylow de $G$. Entonces:\begin{itemize}
+		\item[i)] $n_p = [G:N_G(H)]$ para cada $p$-subgrupo de Sylow $H$ de $G$.
+		\item[ii)] $n_p$ divide a $m$ y $n_p\equiv \modu{1}{p}$.
+	\end{itemize}
+\end{teo}
+\begin{proof}
+	Para $(i)$ es suficiente ver que, por el Teorema \ref{teo:1.47}, los subgrupos de orden $p^n$ son conjugados de $H$. Por definición $N_G(H)=\{x\in G~|~x^{-1}Hx=H\}$, es decir, los elementos en $N_G(H)$ no aportan al conteo de subgrupos conjugados de $H$. Los elementos $gN_G(H)\neq 1_{G/N_G(H)}$ generan un único subgrupo conjugado, pues si $g_1^{-1}Hg_1 = g_2^{-1}Hg_2$, entonces $g_2g_1^{-1}H = Hg_2g_1^{-1}$ y por tanto $g_1g_2^{-1}\in N_G(H)$, luego $g_1\equiv g_2$ en $N_G(H)$. Por tanto, concluimos que $n_p = |G/N_G(H)|=[G:N_G(H)]$.
+	
+	\vspace{2mm}
+	
+	Por otro lado, tomemos $H$ subgrupo de $G$ de orden $p^n$ que existe por el Teorema \ref{teo:1.48}, entonces aplicando el Teorema \ref{teo:1.10} (\textit{Transitividad del índice}) $$m=[G:H]=[G:N_G(H)]\cdot [N_G(H):H] \overset{(i)}{=}n_p\cdot[N_G(H):H]$$Además, $$m+p\Z = (n_p+p\Z)()$$
+\end{proof}
 \section{Teoría de Anillos Elemental}
+
+En esta segunda sección repasaremos los conceptos de anillos, dominios e ideales, pues los cuerpos son un caso concreto de anillos con varias propiedades. También estudiaremos los anillos de polinomios en una variable, el algoritmo de división y criterios muy útiles de irreducibilidad.
 
 \subsection{Ideales, Homomorfismos y Teoremas de Isomorfía}
 \subsection{Ejemplos}
