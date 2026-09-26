@@ -624,7 +624,23 @@ Debemos recordar las siguientes definiciones importantes sobre el grupo de permu
 	Si $p$ es un número primo y $G$ es un subgrupo transitivo de $\Sim_p$ que contiene una transposición, entonces $G=\Sim_p$. Además, $V$ es el único subgrupo transitivo de $\Sim_4$.
 \end{propo}
 
-\subsection{Acciones de Grupos}
+Por último, vamos a estudiar un ejemplo más de subgrupo de $\Sim_n$, que son los \textbf{subgrupos afines}.
+
+\begin{defi}
+	Sea $\Sim_n = \Biy(\Z/n\Z)$ el grupo de biyecciones sobre $\Z/n\Z$. Entonces el grupo $(\Z/n\Z)^*\times \Z/n\Z$ se embebe de manera natural mediante la aplicación $$\begin{array}{rccc}
+		\varphi:&(\Z/n\Z)^*\times \Z/n\Z &\longrightarrow& \Sim_n\\
+		&(a,b) & \longmapsto & \sigma_{a,b}
+	\end{array}$$ donde $\sigma_{a,b}:x+n\Z\mapsto ax+b + n\Z$. Al grupo $\ccal F_n:=\varphi((\Z/n\Z)^*\times \Z/n\Z)$ se lo conoce como el \textbf{n-ésimo subgrupo afín o de Frobenius} de $\Sim_n$. El inverso de $\sigma_{a,b}$ es $\sigma_{c,d}$ donde $ac=1$ y $d=-cb$. Se dice que un subgrupo $H\subset \Sim_n$ es afín si existe $K\subseteq \ccal F_n$ tal que $H,K$ son conjugados en $\Sim_n$.
+\end{defi}
+
+\begin{propo}\label{propo:1.43}
+	Para todo número primo $p$, el subgrupo afín $\ccal F_p$ de $\Sim_p$ es transitivo. Además, si un grupo $G$ de $\Sim_p$ es transitivo, los siguientes enunciados son equivalentes:\begin{itemize}
+		\item[i)] $G$ es un subgrupo afín de $\Sim_p$.
+		\item[ii)] $G$ es resoluble (subsección \ref{subsec:1.1.5}).
+	\end{itemize}
+\end{propo}
+
+\subsection{Acciones de Grupos}\label{subsec:1.1.3}
 
 Este tema impartido en Estructuras Algebraicas es muy importante, pues permite demostrar uno de los teoremas más importantes en la \textit{Teoría de Grupos}, el llamado, \textbf{Teorema de Cauchy}. Debemos recordar varios conceptos como el de acciones, órbitas y estabilizadores; pero no vamos a requerir de ningún teorema a lo largo del desarrollo de la asignatura Ecuaciones Algebraicas.
 
@@ -645,7 +661,7 @@ Este tema impartido en Estructuras Algebraicas es muy importante, pues permite d
 
 Ahora, resumiremos las propiedades y los resultados inmediatos de esta nueva herramienta, sin entrar en detalle de las demostraciones.
 
-\begin{propi}\label{propi:1.43}
+\begin{propi}\label{propi:1.45}
 	Sea $G$ un grupo y $X$ un conjunto no vacío, donde $G$ actúa sobre $X$.\begin{enumerate}
 		\item[1)] \textbf{Criterio de no simplicidad:} si existe un subgrupo $H\leq G$ cuyo índice cumple $2\leq[G:H\leq 4]$, entonces $G$ no es simple.
 		\item[2)] \textbf{Criterio de normalidad:} supongamos que $G$ es finito y $p$ es el menor divisor primo de $|G|$, entonces todo subgrupo $H\leq G$ con $[G:H]=p$ es subgrupo normal.
@@ -655,20 +671,20 @@ Ahora, resumiremos las propiedades y los resultados inmediatos de esta nueva her
 	\end{enumerate}
 \end{propi}
 
-\begin{propo}\label{propo:1.44}
+\begin{propo}\label{propo:1.46}
 	Supongamos que $G\leq \Sim_n$ es transitivo (descrito en la Definición \ref{defi:1.40}). Entonces, el orden de $G$ es múltiplo de $n$. En particular, si $n$ es primo y $G$ es cíclico, entonces $G=\langle\sigma\rangle$ donde $\sigma$ es un $n$-ciclo.
 \end{propo}
 \begin{proof}
 	El grupo $G$ actúa sobre $X=\{1,\dots,n\}$ de manera natural, pues tenemos la inclusión $j:G\rightarrow \Sim_n=\Biy(X)$. Como $G$ es transitivo, la acción sólo posee una órbita, es decir, $O_x=X$ y por Propiedades \ref{propi:1.43} (3) y la transitividad del índice, $$|G|=[G:\Stab{G}{x}]|\Stab{G}{x}| = |O_x||\Stab{G}{x}|=n|\Stab{x}{G}|$$Por último, sea $G=\langle\sigma\rangle$ y supongamos que $\sigma$ no es $n$-ciclo y descompone de manera única como $\sigma=\sigma_1\cdots\sigma_k$. Por lo anterior, tenemos que $n$ divide al mínimo común múltiplo de las longitudes de los $\sigma_i$ que son menor que $n$, pero $n$ es primo, luego esto es absurdo y concluimos que $\sigma$ es $n$-ciclo.
 \end{proof}
 
-\begin{teo}[\textbf{Teorema de Cauchy}]\label{teo:1.45}
+\begin{teo}[\textbf{Teorema de Cauchy}]\label{teo:1.47}
 	Sean $p$ un número primo y $G$ un grupo con $p\mid |G|$. Entonces, el número de subgrupos de $G$ de orden $p$ es congruente con $\modu{1}{p}$. En particular, siempre existe un elemento de orden $p$.
 \end{teo}
 
 \vspace{1.5mm}
 
-\textit{Demostración de Proposición 1.41.} Por la Proposición \ref{propo:1.44}, el orden de $G$ es múltiplo de $p$. Por el Teorema de Cauchy, existe un elemento de orden $p$, que necesariamente es un $p$-ciclo, luego $G$ posee una transposición y un $p$-ciclo y, por tanto, $G=\Sim_p$.
+\textit{Demostración de Proposición 1.41.} Por la Proposición \ref{propo:1.46}, el orden de $G$ es múltiplo de $p$. Por el Teorema de Cauchy, existe un elemento de orden $p$, que necesariamente es un $p$-ciclo, luego $G$ posee una transposición y un $p$-ciclo y, por tanto, $G=\Sim_p$.
 
 \begin{coro}
 	Sea $p$ un número primo impar. Entonces, todo grupo de orden $2p$ es isomorfo o bien al grupo cíclico $\Z/2p\Z$, o al grupo diédrico $\D_{2p}$.
@@ -676,11 +692,11 @@ Ahora, resumiremos las propiedades y los resultados inmediatos de esta nueva her
 \begin{proof}
 	La demostración se puede encontrar bien detallada y simple en \textbf{Corolario IV.2.2} \cite{Gamboagrupos}.
 \end{proof}
-\subsection{Teoremas de Sylow}
+\subsection{Teoremas de Sylow}\label{subsec:1.1.4}
 
 Vamos a terminar la \textit{Teoría de Grupos} necesaria para este curso, con varios de los teoremas más relevantes en relación al número de subgrupos de un grupo. Estos teoremas toman relevancia a la hora de estudiar la cantidad de subextensiones de cuerpos que existen de una extensión dada. Pronto veremos que significa todo esto. De ahora en adelante, fijaremos un primo $p$ y enteros positivos $m,n$ tales que el orden de un grupo $G$ sea $|G|=mp^n$ con $p \nmid m$. Los subgrupos de $G$ de orden $p^m$ para $1\leq m\leq n$ se llaman $p$-subgrupos y, en particular, para $m=n$ se conocen como \textbf{$p$-subgrupos de Sylow}.
 
-\begin{teo}[\textbf{Primer Teorema de Sylow}]\label{teo:1.47}
+\begin{teo}[\textbf{Primer Teorema de Sylow}]\label{teo:1.49}
 	Sea $G$ un grupo con $|G|=mp^n$ donde $p$ es primo y $p\nmid m$, sean $H,K$ dos $p$-subgrupos de Sylow. Entonces $H$ y $K$ son subgrupos conjugados. Además, $H$ es normal si y sólo si es el único $p$-subgrupo de Sylow.
 \end{teo}
 
@@ -693,7 +709,7 @@ Vamos a terminar la \textit{Teoría de Grupos} necesaria para este curso, con va
 	\end{equation*}El cardinal de $X$ es $|X|=|G|/|K|=m$, entonces la fórmula de las órbitas (Propiedades \ref{propi:1.43} (5)) se queda en $m = \sum_{kg\in R}[H:\Stab{H}{Kg}]$. Como $m$ no divide a $p$, entonces existe algún $Kg_0$ cumpliendo que el índice $[H:\Stab{H}{Kg_0}]=1$, luego $H=\Stab{H}{Kg_0}$ y por tanto $$Kg_0=\tilde{h}(Kg_0)=Kg_0h \De g_0hg_0^{-1}\in K,~~\forall~h\in H$$Luego tenemos que $g_0Hg_0^{-1}\subset K$ y como $|g_0Hg_0^{-1}|=|H|=p^n=|K|$, deducimos que $K = g_0Hg_0^{-1}$ y $H,K$ son conjugados. Por último, bajo otro supuesto y usando lo ya probado, si $H$ es el único $p$-subgrupo de Sylow, entonces sus conjugados coinciden con él mismo, es decir, $gHg^{-1}=H \De gh=Hg$ para todo $g\in G$, luego $H$ es normal. El recíproco es inmediato.
 \end{proof}
 
-\begin{teo}[\textbf{Segundo Teorema de Sylow}]\label{teo:1.48}
+\begin{teo}[\textbf{Segundo Teorema de Sylow}]\label{teo:1.50}
 	Sea $G$ un grupo en las condiciones del enunciado anterior. Entonces:\begin{enumerate}
 		\item[i)] Fijado $0\leq k\leq n-1$ y un subgrupo $H_k<G$ de orden $p^k$, existe un subgrupo $H_{k+1}$ de orden $p^{k+1}$ tal que $H_k\normal H_{k+1}$.
 		\item[ii)] Existen subgrupos $H_1,\dots,H_n < G$ de órdenes $p,p^2,\dots,p^n$ respectivamente tales que $H_k\normal H_{k+1}$ para cada $1\leq k\leq n-1$.
@@ -704,22 +720,86 @@ Vamos a terminar la \textit{Teoría de Grupos} necesaria para este curso, con va
 	El apartado $(ii)$ se desprende de $(i)$ empezando con $H_0=\{1_G\}$ de orden $p^0$. Además, por el Teorema de la Correspondencia, por ser $H_k\normal H_{k+1}$, el grupo cociente $H_{k+1}/H_k$ es cíclico de orden primo, luego sus subgrupos son los triviales, y por tanto cualquier $p$-subgrupo de Sylow contenido en $H_{k+1}$ es o bien $H_{k+1}$ o $H_k$, luego $(i)$ también implica $(iii)$. Demostremos ahora $(i)$. Por inducción sobre $k$, para $k=0$ tenemos, por el Teorema \ref{teo:1.45} (\textit{Teorema de Cauchy}) que existe un subgrupo de orden $H_1$ de orden $p$ que tiene a $H_0=\{1_G\}$ como subgrupo normal. Supongamos que se cumple para $0<k\leq n-1$, entonces $[G:H_k]=p^{n-k}m\in p\Z$, luego se deduce que $[N_G(H_k):H_k]\in p\Z$ y aplicando el \textit{Teorema de Cauchy} a $N_G(H_k)/H_k$, existe un subgrupo de orden $p$, que por el Teorema de la Correspondencia, este corresponde a un grupo de la forma $H_{k+1}/H_k$ con $H_k\normal H_{k+1}$ y $|H_{k+1}| = p^{k+1}$.
 \end{proof}
 
-\begin{teo}[\textbf{Tercer Teorema de Sylow}]\label{1.49}
+\begin{teo}[\textbf{Tercer Teorema de Sylow}]\label{1.51}
 	Sea $G$ un grupo en las condiciones del enunciado anterior ($|G|=p^nm$) y $n_p$ el número de $p$-subgrupos de Sylow de $G$. Entonces:\begin{itemize}
 		\item[i)] $n_p = [G:N_G(H)]$ para cada $p$-subgrupo de Sylow $H$ de $G$.
 		\item[ii)] $n_p$ divide a $m$ y $n_p\equiv \modu{1}{p}$.
 	\end{itemize}
 \end{teo}
 \begin{proof}
-	Para $(i)$ es suficiente ver que, por el Teorema \ref{teo:1.47}, los subgrupos de orden $p^n$ son conjugados de $H$. Por definición $N_G(H)=\{x\in G~|~x^{-1}Hx=H\}$, es decir, los elementos en $N_G(H)$ no aportan al conteo de subgrupos conjugados de $H$. Los elementos $gN_G(H)\neq 1_{G/N_G(H)}$ generan un único subgrupo conjugado, pues si $g_1^{-1}Hg_1 = g_2^{-1}Hg_2$, entonces $g_2g_1^{-1}H = Hg_2g_1^{-1}$ y por tanto $g_1g_2^{-1}\in N_G(H)$, luego $g_1\equiv g_2$ en $N_G(H)$. Por tanto, concluimos que $n_p = |G/N_G(H)|=[G:N_G(H)]$.
+	Para $(i)$ es suficiente ver que, por el Teorema \ref{teo:1.49}, los subgrupos de orden $p^n$ son conjugados de $H$. Por definición $N_G(H)=\{x\in G~|~x^{-1}Hx=H\}$, es decir, los elementos en $N_G(H)$ no aportan al conteo de subgrupos conjugados de $H$. Los elementos $gN_G(H)\neq 1_{G/N_G(H)}$ generan un único subgrupo conjugado, pues si $g_1^{-1}Hg_1 = g_2^{-1}Hg_2$, entonces $g_2g_1^{-1}H = Hg_2g_1^{-1}$ y por tanto $g_1g_2^{-1}\in N_G(H)$, luego $g_1\equiv g_2$ en $N_G(H)$. Por tanto, concluimos que $n_p = |G/N_G(H)|=[G:N_G(H)]$.
 	
 	\vspace{2mm}
 	
-	Por otro lado, tomemos $H$ subgrupo de $G$ de orden $p^n$ que existe por el Teorema \ref{teo:1.48}, entonces aplicando el Teorema \ref{teo:1.10} (\textit{Transitividad del índice}) $$m=[G:H]=[G:N_G(H)]\cdot [N_G(H):H] \overset{(i)}{=}n_p\cdot[N_G(H):H]$$Además, $$m+p\Z = (n_p+p\Z)()$$
+	Por otro lado, tomemos $H$ subgrupo de $G$ de orden $p^n$ que existe por el Teorema \ref{teo:1.50}, entonces aplicando el Teorema \ref{teo:1.10} (\textit{Transitividad del índice}) $$m=[G:H]=[G:N_G(H)]\cdot [N_G(H):H] \overset{(i)}{=}n_p\cdot[N_G(H):H]$$Además, $$m+p\Z = (n_p+p\Z)()$$
 \end{proof}
+
+\subsection{Grupos Resolubles}\label{subsec:1.1.5}
+
+Para finalizar con la parte de grupos, vamos a dar varios resultar acerca de una propiedad importante de los grupos: la \textbf{resolubilidad}. Esta propiedad tomará gran importancia en el estudio de soluciones por rádicales en el contexto de ecuaciones algebraicas.
+
+\begin{defi}
+	Un conjunto $\{G_0,\dots,G_n\}$ de subgrupos de $G$ es una \textbf{torre normal} si $$\{1_G\}:=G_0\normal G_1\normal\cdots\normal G_n:= G$$ Los cocientes $G_{i+1}/G_i$ se llaman \textbf{factores de la torre}. Diremos que dicha torre es cíclica si cada uno de sus factores es un grupo cíclico. Si $G$ admite una torre normal cíclica, entonces diremos que $G$ es \textbf{resoluble}.
+\end{defi}
+
+\begin{propo}
+	Sea $H$ un subgrupo de un grupo resoluble $G$. Entonces $H$ es también resoluble.
+\end{propo}
+
+\begin{proof}
+	Tomando la torre normal de $G$, definimos $H_i=G_i\cap H$ y usando \ref{propo:1.13} (1), afirmamos que $H_i\normal H_{i+1}$. Ahora solo falta ver que esta torre normal de $H$ es cíclica. Tomamos la aplicación $$H_{i+1}/H_i \rightarrow G_{i+1}/G_i,~xH_i\mapsto xG_i$$ y veamos que es inyectiva. Primero, está bien definida pues si $xH_i=yH_i$, entonces por la inclusión, $H_i\subset G_i$, luego necesariamente $xG_i=yG_i$, y además es claramente un homomorfismo. Por otro lado, como $x\in H_{i+1}=G_{i+1}\cap H$, se tiene que si $xG_i=G_i$ y $x\in G_i\cap H$, luego $xH_i = 1_{H_{i+1}/H_i}$.
+\end{proof}
+
+El siguiente teorema no lo demostraremos, pero de nuevo, se puede encontrar una prueba (un poco larga e innecesaria para este curso) en \cite{Gamboagrupos}. Este resultado será de gran ayuda para uno de los últimos capítulos del curso.
+
+\newpage
+
+\begin{teo}[\textbf{Criterio de resolubilidad}]\label{teo:1.54}
+	Sea $H$ un subgrupo normal de un grupo $G$. Las siguientes afirmaciones son equivalentes:\begin{itemize}
+		\item[i)] El grupo $G$ es resoluble.
+		\item[ii)] Tanto $H$ como $G/H$ son grupos resolubles.
+	\end{itemize}
+\end{teo}
+
+\begin{obs}\label{obs:1.55}
+	De estos resultados y de los resultados anteriores, podemos deducir varias observaciones y ejemplos.\begin{itemize}
+		\item[1)] Los grupos cíclicos son todos resolubles por la cadena $\{G_0,G_1\}$ con $G_0:=\{e\}$ y $G_1$ el grupo en cuestión.
+		\item[2)] Todo grupo abeliano finito es resoluble. Basta probarlo por inducción sobre el orden. Si $|G|=1$ entonces es trivialmente resoluble. Si $|G|=n>1$, entonces, por el Teorema \ref{teo:1.47} existe un subgrupo $H$ normal (pues $G$ es abeliano) de orden primo $p$, que es cíclico, luego resoluble. Por hipótesis de inducción, el grupo cociente $G/H$ de orden $n/p<n$ es resoluble, luego por el Teorema \ref{teo:1.54}, $G$ es resoluble.
+		\item[3)] Los grupos diédricos $\D_n$ son resolubles. Por lo descrito en la Tabla \ref{tabla:1.1}, el grupo $H=\langle \rho\rangle$ es de orden $n$, resoluble, y normal. Además, el grupo $\D_n/H$ es de orden $2$ (finito abeliano necesariamente), luego resoluble. El teorema anterior demuestra que $\D_n$ es también resoluble.
+		\item[4)] Todo $p$-grupo (de orden $p^n$) es resoluble, consecuencia directa del \textit{Segundo Teorema de Sylow}.
+		\item[5)] Un grupo $G$ con $|G|=pq$, $p,q$ primos distintos es resoluble. Supongamos que $q<p$, entonces, por el \textit{Tercer Teorema de Sylow}, el número de $p$-subgrupos de Sylow, $n_p$, divide a $q$ y $n_p-1\in p\Z$, luego $n_p=1$ necesariamente. Existe, por tanto, un único subgrupo $H$ de orden $p$, luego tiene que ser normal (Observación \ref{obydefi:1.12} (1)) y resoluble. El grupo cociente $G/H$ es de orden primo, luego $G$ es resoluble.
+		\item[6)] Si un grupo finito $G$ es resoluble entonces admite una torre normal cíclica, donde todos sus factores tienen orden primo. El truco es construir dicha torre normal desde una torre arbitraria.
+	\end{itemize}
+\end{obs}
+
+Terminamos volviendo a los subgrupos transitivos en el grupo simétrico $\Sim_p$, tenemos un teorema más potente, relacionado con la Proposición \ref{propo:1.43}.
+
+\begin{teo}
+	Sea $p$ un número primo y sea $G$ un subgrupo transitivo del grupo simétrico $\Sim_p$. Las siguientes afirmaciones son equivalentes:\begin{itemize}
+		\item[i)] $G$ es un grupo resoluble.
+		\item[ii)] Si $\sigma\in G\setminus\{\textbf{id}\}$, su conjunto $\text{\upshape{Fix}}(\sigma)$ de puntos fijos consta, a lo sumo, de dos elementos.
+		\item[iii)] $G$ posee un subgrupo normal de orden $p$.
+		\item[iv)] $G$ tiene, a lo sumo, $p(p-1)$ elementos.
+		\item[v)] $|G|\in p\Z$ y $|G|<p^2$.
+	\end{itemize}
+\end{teo}
+
+\newpage
+
 \section{Teoría de Anillos Elemental}
 
 En esta segunda sección repasaremos los conceptos de anillos, dominios e ideales, pues los cuerpos son un caso concreto de anillos con varias propiedades. También estudiaremos los anillos de polinomios en una variable, el algoritmo de división y criterios muy útiles de irreducibilidad.
+
+\begin{defi}
+	Un anillo es una terna $(A,+,\cdot)$ donde $A$ es un conjunto no vacío y dos operaciones $+,\cdot:A\times A\rightarrow A$ que cumplen:\begin{itemize}
+		\item[1.] $(a+b)+c = a+(b+c),~~\forall~a,b,c\in A$ (\textbf{Asociativa para la suma}).
+		\item[2.] $a+b=b+a,~~\forall~a,b\in A$ (\textbf{Conmutativa para la suma}).
+		\item[3.] Existe $0\in A$ tal que $a+0=0+a=a,~\forall~a\in A$ (\textbf{Neutro para la suma}).
+		\item[4.] Para cada $a\in A$, existe $-a\in A$ tal que $a+(-a)=0$ (\textbf{Opuesto en la suma}).
+		\item[5.] $(ab)c=a(bc),~~\forall~a,b,c\in A$ (\textbf{Asociativa para el producto}).
+		\item[6.] $(a+b)c=ac+bc$ y $a(b+c)=ab+ac$ $\forall~a,b,c\in A$ (\textbf{Distributiva de la suma respecto al producto}).
+	\end{itemize}
+\end{defi}
 
 \subsection{Ideales, Homomorfismos y Teoremas de Isomorfía}
 \subsection{Ejemplos}

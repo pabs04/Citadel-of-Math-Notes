@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.3)  15 SEP 2026 20:32
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.3)  26 SEP 2026 14:37
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1721,12 +1721,12 @@ LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <7> on input line 142.
 LaTeX Font Info:    External font `lmex10' loaded for size
 (Font)              <5> on input line 142.
-<logo_ucm.png, id=75, 3854.4pt x 2168.1pt>
+<logo_ucm.png, id=79, 3854.4pt x 2168.1pt>
 File: logo_ucm.png Graphic file (type png)
 <use logo_ucm.png>
 Package pdftex.def Info: logo_ucm.png  used on input line 175.
 (pdftex.def)             Requested size: 217.66211pt x 122.40524pt.
-<logo_mat.png, id=76, 1456.44125pt x 409.53pt>
+<logo_mat.png, id=80, 1456.44125pt x 409.53pt>
 File: logo_mat.png Graphic file (type png)
 <use logo_mat.png>
 Package pdftex.def Info: logo_mat.png  used on input line 180.
@@ -1846,33 +1846,45 @@ Package cleveref Info: loaded `spanish' language definitions on input line 589.
 Package cleveref Info: loaded `spanish' language definitions on input line 614.
 
  [15] [16]
-Package cleveref Info: loaded `spanish' language definitions on input line 662.
+Package cleveref Info: loaded `spanish' language definitions on input line 678.
 
-Package cleveref Info: loaded `spanish' language definitions on input line 677.
 
-Package cleveref Info: loaded `spanish' language definitions on input line 688.
+
+LaTeX Warning: Reference `propi:1.43' on page 17 undefined on input line 678.
 
 Package cleveref Info: loaded `spanish' language definitions on input line 693.
 
- [17]
+Package cleveref Info: loaded `spanish' language definitions on input line 698.
+
+[17]
 Package cleveref Info: loaded `spanish' language definitions on input line 704.
 
-Package cleveref Info: loaded `spanish' language definitions on input line 714.
 
 
+LaTeX Warning: Reference `propi:1.43' on page 18 undefined on input line 709.
 
-LaTeX Warning: Reference `teo:1.10' on page 18 undefined on input line 718.
+Package cleveref Info: loaded `spanish' language definitions on input line 720.
+
+
+LaTeX Warning: Reference `teo:1.45' on page 18 undefined on input line 720.
 
 [18]
-Package cleveref Info: loaded `spanish' language definitions on input line 727.
+Package cleveref Info: loaded `spanish' language definitions on input line 730.
 
- [19]
+Package cleveref Info: loaded `spanish' language definitions on input line 750.
+
+Package cleveref Info: loaded `spanish' language definitions on input line 755.
+
+ [19] [20]
+Package cleveref Info: loaded `spanish' language definitions on input line 807.
+
+ [21]
 \bbl@ensure@spanish {Cap\'\i tulo} 2.
-Package cleveref Info: loaded `spanish' language definitions on input line 727.
+Package cleveref Info: loaded `spanish' language definitions on input line 807.
 
-[20
+[22
 
-] [21
+] [23
 
 
 ] (./main.aux
@@ -1891,7 +1903,7 @@ LaTeX Warning: There were undefined references.
 LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
 
 Package rerunfilecheck Info: File `main.out' has not changed.
-(rerunfilecheck)             Checksum: 90F95017E15BD7C1F09DF0E764AE956B;2117.
+(rerunfilecheck)             Checksum: 00A08BB3C445B646CD484F0FD819FC28;2267.
 Package logreq Info: Writing requests to 'main.run.xml'.
 \openout1 = `main.run.xml'.
 
@@ -1902,11 +1914,11 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 ### semi simple group (level 1) entered at line 122 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 51369 strings out of 467159
- 1036301 string characters out of 5413462
- 2035659 words of memory out of 5000000
- 79751 multiletter control sequences out of 15000+600000
- 750614 words of font info for 138 fonts, out of 8000000 for 9000
+ 51398 strings out of 467159
+ 1036652 string characters out of 5413462
+ 2035283 words of memory out of 5000000
+ 79769 multiletter control sequences out of 15000+600000
+ 759156 words of font info for 140 fonts, out of 8000000 for 9000
  1141 hyphenation exceptions out of 8191
  121i,12n,122p,2518b,2439s stack positions out of 10000i,1000n,20000p,200000b,200000s
 <c:/texlive/2026/texmf-dist/fonts/type1/public/amsfonts/euler/e
@@ -1932,10 +1944,10 @@ t/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2026/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2026/texmf-dist/fonts/
 type1/public/old-arrows/oasy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/publ
 ic/old-arrows/oasy8.pfb>
-Output written on main.pdf (21 pages, 781403 bytes).
+Output written on main.pdf (23 pages, 790363 bytes).
 PDF statistics:
- 485 PDF objects out of 1000 (max. 8388607)
- 376 compressed objects within 4 object streams
- 107 named destinations out of 1000 (max. 500000)
- 207 words of extra memory for PDF output out of 10000 (max. 10000000)
+ 517 PDF objects out of 1000 (max. 8388607)
+ 405 compressed objects within 5 object streams
+ 118 named destinations out of 1000 (max. 500000)
+ 215 words of extra memory for PDF output out of 10000 (max. 10000000)
 
