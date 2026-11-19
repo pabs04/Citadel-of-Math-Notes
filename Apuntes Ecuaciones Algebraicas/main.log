@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.3)  26 SEP 2026 14:37
+This is pdfTeX, Version 3.141592653-2.6-1.40.29 (TeX Live 2026) (preloaded format=pdflatex 2026.8.3)  1 NOV 2026 20:33
 entering extended mode
  restricted \write18 enabled.
  %&-line parsing enabled.
@@ -1899,9 +1899,6 @@ L3 programming layer <2026-07-20>
 
 LaTeX Warning: There were undefined references.
 
-
-LaTeX Warning: Label(s) may have changed. Rerun to get cross-references right.
-
 Package rerunfilecheck Info: File `main.out' has not changed.
 (rerunfilecheck)             Checksum: 00A08BB3C445B646CD484F0FD819FC28;2267.
 Package logreq Info: Writing requests to 'main.run.xml'.
@@ -1944,7 +1941,7 @@ t/fonts/type1/public/amsfonts/symbols/msam10.pfb><c:/texlive/2026/texmf-dist/fo
 nts/type1/public/amsfonts/symbols/msbm10.pfb><c:/texlive/2026/texmf-dist/fonts/
 type1/public/old-arrows/oasy10.pfb><c:/texlive/2026/texmf-dist/fonts/type1/publ
 ic/old-arrows/oasy8.pfb>
-Output written on main.pdf (23 pages, 790363 bytes).
+Output written on main.pdf (23 pages, 790396 bytes).
 PDF statistics:
  517 PDF objects out of 1000 (max. 8388607)
  405 compressed objects within 5 object streams
